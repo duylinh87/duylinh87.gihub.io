@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Phuong trinh bac 2</title>
+    <style>
+
+        #ketqua {
+            margin: 20px;
+            padding: 20px;
+            background: darkgoldenrod;
+            color: antiquewhite
+        }
+    </style>
+</head>
+<body>
+    <h1> Giải phương trình bậc 2 : ax + bx + c =0</h1>
+     <input type="text" id ="texta" placeholder="Nhap so a" > </br>
+     <input type="text" placeholder="Nhap so b" id ="textb"> </br>
+     <input type="text" placeholder="Nhap so c" id ="textc"> </br>
+     <input type="button" value="ketqua" onclick = "hien()">
+     nghiem x1 <input type="text" id ="nghiem1" value="0">
+     nghiem x2 <input type="text" id ="nghiem2" value="0">
+    <div id="ketqua">
+         
+    </div>
+
+    <script src = "ptb2.js">
+
+    //  onload= function hien(){
+    //     let a = document.getElementById ("texta")
+    //     let soa = a.value;
+    //          alert (soa)
+    //         }
+
+    //    function ptb2() {
+    //       let x =1;
+    //       let a = parseInt (document.getElementById ("texta").value)
+    //       console.log (a)
+    //       let b = parseInt.document.getElementById ("texta").value
+    //       let c = parseInt.document.getElementById ("texta").value
+    //       let deta = b*b - 4*a*c;
+    //       if ( deta < 0) {
+    //           document.getElementById ("ketqua").innerHTML = "phtvn"
+    //       }
+    //     //   else ( deta = 0) {
+    //     //     document.getElementById ("ketqua").innerHTML = ` x = b*b -4*a*c'`
+    //     //   } 
+    //      return x
+    //   }
+
+    </script>
+</body>
+
+<!-- <head>
+        <title>Giai phuong trinh bac 2</title>
+        <script language="JavaScript">
+        function giai(form){
+                let x= parseInt(form.a.value);
+                let y= parseInt(form.b.value);
+                let z= parseInt(form.c.value);
+                 let  delta=(y*y-4*x*z)
+        if(delta ==0){
+         alert("phuong trinh co nghiem kep");
+         x1=-y/(2*x) ;
+         x2=-y/(2*x);
+         form.x.value= eval(x1);
+         form.y.value= eval(x2);
+        }
+        else if(delta<0){
+         alert("phuong trinh vo nghiem");
+        } 
+        else{
+         alert("phuong trinh co hai nghiem");
+         x1=(-y-Math.sqrt(delta))/(2*x);
+         x2=(-y+Math.sqrt(delta))/(2*x);
+         form.x.value= eval(x1);
+         form.y.value= eval(x2);
+        }
+        }
+        </script>
+ </head>
+    <body>
+        <form method="post">
+        <center>
+        <br>Nhap gia tri a:
+        <input type="text" name="a" value="">
+        <br> Nhap gia tri b:
+        <input type="text" name="b" value="">
+        <br>Nhap gia tri c:
+        <input type="text" name="c" value="">
+        <br>Đáp số:
+        <input type="text" name="x" value="">
+        <input type="text" name="y" value="">
+        <input type="button" value="giai" onClick="giai(this.form)">
+        </center>
+        </form>
+     </body>
+</html> -->

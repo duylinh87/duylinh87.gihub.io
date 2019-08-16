@@ -1,0 +1,61 @@
+h1{
+    color: deeppink
+}
+div{
+    background: chocolate;
+    height: 400px;
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 30px
+}
+img{
+    position: absolute;
+    left: 50%   ;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+div:hover {
+    background-image: url(./hinh-xam-than-chet-5.jpg);
+    transition: background 2s linear
+}
+div:hover img{
+    transform: scale(0);
+    transition: all 5s ease-out
+}
+div::before {
+    content:"";
+    background:darkgoldenrod;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+}
+div:hover::before{
+    width: 0;
+    transition: 2s ;
+ 
+}
+
+/* div::after {
+    content:"";
+    background-image: url(./hinh-xam-than-chet-5.jpg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+}
+div:hover::after{
+   
+    width: 0;
+    transition: 2s  
+    /* z-index: 2; */
+/* } */ */

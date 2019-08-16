@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>data table</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1>data table</h1>
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <th> profile_image </th>
+                <th>display_name</th>
+                <th>reputation</th>
+                <th>website_url</th>
+                <th>creation_date</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $.ajax({
+            url: "http://localhost:3000/items",
+            success: function (users) {
+                render(users)
+            }
+        });
+        function render(users) {
+            const tbody = document.getElementsByTagName('tbody')[0]
+            for (let i = 0; i < users.length; i++) {
+                const user = users[i];
+                let tr = document.createElement('tr')
+                //es6 template string
+                tr.innerHTML = `<tr>
+                    <td>
+                        <img src ="${user.profile_image}" />
+                    </td>
+                    <td>
+                        <a href="${user.link}" title="${user.link}">${user.display_name}</a>
+                    </td>
+                </tr>
+                `
+                tbody.appendChild(tr)
+            }
+        }
+    </script>
+</body>
+
+</html>

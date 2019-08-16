@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>About Me</title>
+</head>
+<style>
+
+.mystyle {
+  width: 300px;
+  height: 50px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+}
+
+
+</style>
+<body>
+    <h1>About Me</h1>
+
+    <ul id ="mylist">
+        <li>Nickname: <span id="nickname"></span>
+        <li>Favorites: <span id="favorites"></span>
+        <li>Hometown: <span id="hometown"></span>
+    </ul>
+    <script >
+//  noi dung 1
+        let body = document.getElementsByTagName("body")
+        body[0].style.fontFamily = "Arial, sans-serif"
+//  noi dung 2
+        let nickName = document.getElementById("nickname");
+        nickName.innerText = " Duy Linh "
+        let favorites = document.getElementById("favorites");
+        favorites.innerText = " Tử vi , lập trình "
+        let hometown = document.getElementById("hometown");
+        hometown.innerText = " Nam định "
+//  noi dung 3
+
+ let itemli = document.getElementsByTagName ("li")
+   for ( let i = 0 ; i <itemli.length ; i++){
+   itemli[i].classList.add("mystyle")}
+//noi dung 4  
+let Myimage = document.createElement("img");
+		let element_child = document.getElementById("mylist");
+		document.body.insertBefore(Myimage, element_child);
+		let img = document.getElementsByTagName("img")[0];
+		let att = document.createAttribute("src");
+		att.value = "duylinh.jpg";
+		img.setAttributeNode(att);
+    </script>
+</body>
+</html>

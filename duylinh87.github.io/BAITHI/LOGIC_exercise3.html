@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Số nguyên tố</title>
+</head>
+
+<body>
+    <h1>Số nguyên tố</h1>
+    <script>
+        function primeNumberList(maxVal) {
+            let songuyento = [];
+            let songuento2 = songuyento.push(2, 3, 5, 7);
+            for (i = 9; i < maxVal; i++) {
+                if (i % 2 !== 0 && i % 3 !== 0 && i % 5 !== 0 && i % 7 !== 0) {
+                    songuyento.push(i)
+                }
+            }
+            for (let j = 0; j < songuyento.length; j++) {
+                document.write(songuyento[j] + "   ")
+            }
+        }
+        primeNumberList(1000)
+    </script>
+</body>
+
+</html>

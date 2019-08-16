@@ -1,0 +1,64 @@
+*{
+    box-sizing: border-box
+}
+.warp {
+    position: relative;
+    height: 30px;
+    overflow: hidden;   
+}
+.warp > div{
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    color:black  
+}
+.warp .text1{
+    background: aqua;
+    z-index: 1;
+    animation: lan1 1s infinite;
+   
+    
+}
+.warp .text2{
+    background:darkgoldenrod;
+    z-index: 2;
+    animation: lan2 1s infinite;
+}
+.warp .text3{
+    background:lawngreen;
+    z-index: 3;
+    animation: lan3 1s infinite;
+}
+.top {
+    margin-top: 10px;
+}
+@keyframes lan1 {
+    0% { top:-0px
+    }
+    30% { top:0px;
+    }
+    60% { top:10px;
+    }
+    100% { top:50px;
+    }
+}
+@keyframes lan2 {
+    0% { top:-50px
+    }
+    30% { top:-30px;
+    }
+    60% { top:-10px;
+    }
+    100% { top:0px;
+    }
+}
+@keyframes lan3 {
+    0% { top:50px
+    }
+    30% { top:30px;
+    }
+    60% { top:10px;
+    }
+    100% { top:0px;
+    }
+}

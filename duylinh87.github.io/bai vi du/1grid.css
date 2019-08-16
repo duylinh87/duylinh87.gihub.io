@@ -1,0 +1,68 @@
+h2 {
+    text-align: center;
+}
+
+#main-function {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
+#main-function p {
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-gap: 10px;
+    text-align: center;
+}
+
+#main-function p button {
+    max-width: 100%;
+    margin: auto;
+}
+
+#optional-function {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
+#optional-function p {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    text-align: center;
+}
+
+#optional-function p button,
+input,
+select {
+    max-width: 100%;
+    margin: auto;
+}
+
+.optional-1-and-2 input {
+    max-width: 100%;
+}
+
+#optional-3 select {
+    max-width: 100%;
+    font-family: 
+}
+
+#optional-3 label {
+    text-align: center;
+}
+
+#optional-4 input {
+    width: 170px;
+    max-width: 100%;
+}
+
+p {
+    font-size: 16px;
+}

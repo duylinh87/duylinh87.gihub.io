@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>My Books List</title>
+  <style>
+    *{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+    .red {
+      color: brown;
+      background: aqua;
+      border: 1px solid black;
+      margin: 10px 0 10px 0;
+      padding: 3px
+    }
+
+    .blue {
+      color: slateblue;
+      border: 1px solid black;
+      padding: 3px
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>My Books List</h1>
+  <script>
+
+    let arr = [
+      {
+        title: 'The Design of EveryDay Things',
+        author: 'Don Norman',
+        thumbnail: 'https://upload.wikimedia.org/wikipedia/en/3/33/The_Design_of_Everyday_Things_%28cover_1988%29.jpg',
+        alreadyRead: false
+      },
+      {
+        title: 'The Most Human Human',
+        author: 'Brian Christian',
+        thumbnail: 'https://images-na.ssl-images-amazon.com/images/I/51aKPFuUy1L._SX324_BO1,204,203,200_.jpg',
+        alreadyRead: true
+      },
+      {
+        title: 'hack nao',
+        author: 'Duy Linh',
+        thumbnail: 'https://images-na.ssl-images-amazon.com/images/I/51aKPFuUy1L._SX324_BO1,204,203,200_.jpg',
+        alreadyRead: false
+      },
+      {
+        title: 'hack nao',
+        author: 'fdfdsf',
+        thumbnail: 'https://images-na.ssl-images-amazon.com/images/I/51aKPFuUy1L._SX324_BO1,204,203,200_.jpg',
+        alreadyRead: true
+      },
+    ]
+
+    let title = "";
+    let author = "";
+    let thumbnail = "";
+    let alreadyRead = "";
+ for (let i = 0; i < arr.length; i++) {
+      title = arr[i].title
+      author = arr[i].author
+      thumbnail = arr[i].thumbnail
+      alreadyRead = arr[i].alreadyRead
+      let iDiv = document.createElement('div');
+      iDiv.id = 'block';
+      iDiv.className = 'block';
+      if (alreadyRead === true) {
+        iDiv.className = 'red'
+      }
+      else { iDiv.className = 'blue' }
+      iDiv.innerHTML = title + "</br>" + author + "</br>" + thumbnail
+
+      document.getElementsByTagName('body')[0].appendChild(iDiv);
+  }
+
+
+  </script>
+</body>
+
+</html>

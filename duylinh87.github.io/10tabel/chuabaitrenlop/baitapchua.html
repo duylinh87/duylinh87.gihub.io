@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="./baitapchua.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <h1>Data Table Users</h1>
+    <div class="table-wapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Ảnh đại diện</th>
+
+                    <th class="click-sort" data-name='display_name' data-oder='0' onclick="sort(this)">Tên
+                        <span class='desc'>
+                            <i class="fas fa-sort-up"></i>
+                        </span>
+                        <span class="asc">
+                            <i class="fas fa-sort-down"></i>
+                        </span>
+                    </th>
+
+                    <th class="click-sort" data-name='user_id' data-oder='0' onclick="sort(this)">Reputation
+                        <span class="desc">
+                            <i class="fas fa-sort-up"></i>
+                        </span>
+                        <span class="asc">
+                            <i class="fas fa-sort-down"></i>
+                        </span>
+                    </th>
+                    <th>Link website</th>
+                    <th class="click-sort" data-name='creation_date' data-oder='0' onclick="sort(this)">Ngày tham gia
+                        <span class="desc">
+                            <i class="fas fa-sort-up"></i>
+                        </span>
+                        <span class="asc">
+                            <i class="fas fa-sort-down"></i>
+                        </span>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="users">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="./baitapchua.js">
+
+</script>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+// function render(users) {
+    //     const tbody = $('tbody')
+    //     console.log(tbody[0])
+    //     for (let i = 0; i < users.length; i++) {
+    //         const user = users[i]
+    //         let tr = $('<tr></tr>')
+    //         tbody.append(tr)
+    //         let profile_image_td = $('<td></td?')
+    //         let profile_image = $('<img/>')
+    //         profile_image.attr('src', user.profile_image)
+    //         profile_image_td.append(profile_image)
+    //         tr.append(profile_image_td)
+    //     }
+    // } -->

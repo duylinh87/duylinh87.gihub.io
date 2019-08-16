@@ -1,0 +1,28 @@
+h1{
+    color:  rosybrown;
+    text-align: center
+}
+body {
+    background: wheat;
+    width: 90%;
+    margin: auto;
+}
+.container {
+    display: flex;
+    /* width: 100%; */
+    height: 250px;
+}
+.container .sanpham  {
+overflow: hidden;
+padding: 1em;
+}
+.container .sanpham img {
+    width: 100%;
+}
+.container .sanpham p {
+  margin-top: 10px;
+  text-align: center  
+}
+nav img {
+    width: 50%;
+}

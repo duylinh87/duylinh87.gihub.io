@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box
+}
+
+
+.container {
+    background:  red;
+    width: 80%;
+    height: 300px;
+    margin: auto
+}
+.container .left ,.right{
+    width: 50%;
+    background:aqua;
+    float: left;
+    height: 100%;
+    padding: 10px
+}
+.right .item1{
+    width: 100%;
+    height: 50%;
+    background: darkgray;
+}
+.right .item2{
+    width: 100%;
+    height: 50%;
+    background: lawngreen;
+}
+
+.footer {
+    background:  red;
+    width: 80%;
+    height: 300px;
+    margin: auto;
+
+}
+
+

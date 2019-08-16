@@ -1,0 +1,33 @@
+.input {
+    width: 50% !important;
+    display: inline-block !important;
+}
+
+
+.background {
+    width: 200px;
+  }
+  
+  .maudo {
+    background-color: red !important;
+  }
+  
+  .mauvang {
+    background-color: yellow !important;
+  }
+  
+  .mauxanh {
+    background-color: green !important;
+  }
+  
+  .mauden {
+    background-color: black !important;
+  }
+  
+  #background-default {
+    background-color: black;
+  }
+  
+  .select {
+    width: 50% !important;
+  }

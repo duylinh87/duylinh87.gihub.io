@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Baì ẩn hiện</title>
+  <style>
+    table,
+    td {
+      border: 1px solid darkcyan;
+      padding: 5px;
+      border-collapse: collapse
+    }
+
+    #search_advance {
+      display: none
+    }
+  </style>
+  <script language="javascript">
+  function show_search_advance () {
+    let a = document.getElementById ("show_search_advance");
+    let catagory =document.getElementById("search_advance");
+     text = a.innerHTML;
+     if ( text == "Tìm kiếm nâng cao"){
+       catagory.style.display = "table-row";
+       a.innerHTML = " bo fdfdfdfffdfdfdfdf"
+     }
+     else {
+      catagory.style.display = "none";
+       a.innerHTML = "Tìm kiếm nâng cao"
+     }
+  }
+  </script>
+</head>
+
+<body>
+  <h1> Tim kiem du lieu</h1>
+  <table>
+    <tr>
+      <td> nhap tieu de</td>
+      <td>
+        <input type="text" id="title" value=""> <br/>
+        <a href="#" onclick=" return show_search_advance()" id="show_search_advance">Tìm kiếm nâng cao</a>
+      </td>
+    </tr>
+    <tr id="search_advance">
+      <td> chon chuyen muc</td>
+      <td>
+           <select id ="catagory">
+              <option>  php</option>
+              <option>  JS</option>
+           </select>
+      </td>
+    </tr>
+       <td></td>
+       <td>
+         <input type ="button" id ="btn_search" value ="timkiem"/>
+       </td>
+  </table>
+
+</body>
+
+</html>

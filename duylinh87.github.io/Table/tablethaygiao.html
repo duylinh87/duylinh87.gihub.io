@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+    <link rel="stylesheet" href="./table.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="table">
+        <table>
+            <thead>
+                <tr>
+                    <th> profile_img</th>
+                    <th> Name</th>
+                    <th> a</th>
+                    <th> b</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+</body>
+<script>
+    $.ajax({
+        url: "https://cody-json-server.herokuapp.com/db",
+        success: function (user) {
+            render(user)
+        }
+    });
+
+    // function render(users) {
+    //     const tbody = $('tbody')
+    //     console.log(tbody[0])
+    //     for (let i = 0; i < users.length; i++) {
+    //         const user = users[i]
+    //         let tr = $('<tr></tr>')
+    //         tbody.append(tr)
+    //         let profile_image_td = $('<td></td?')
+    //         let profile_image = $('<img/>')
+    //         profile_image.attr('src', user.profile_image)
+    //         profile_image_td.append(profile_image)
+    //         tr.append(profile_image_td)
+    //     }
+    // }
+
+
+    function render (users) {
+        const tbody = document.getElementsByTagName ('tbody')[0]
+        for ( let i = 0 ; i < users.length ; i++) {
+            const user = users[i];
+            let tr = document.createElement ('tr')
+                tr.innerHTML=`
+				<tr>
+					<td>
+						<img src="${user.profile_image}"/>
+					</td>
+					<td>
+						<a href="${user.link}" title="${user.link}"/>${user.display_name}</a>
+					</td>
+				</tr>
+				`
+                tbody.appendChild(tr)
+        }
+    }
+
+
+
+</script>
+
+</html>

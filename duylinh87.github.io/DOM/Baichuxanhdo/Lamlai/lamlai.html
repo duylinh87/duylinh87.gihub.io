@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    .red {
+        color: red;
+    }
+    .blue{
+        color: blue;
+    }
+    /* input {
+        display: block
+    } */    
+    
+    </style>
+</head>
+<body>
+    <form>
+      nhap so <input type ="text" id ="number" value ="0">
+      <input type = "button" value ="inketqua" onclick = "print_number ()">
+      <input type="reset" value ="reset">
+    </form>
+    <!-- <div id = "result"> 
+
+    </div>
+  -->
+
+    <p id = "doanvan" style=" color:red">
+  
+    </p>
+<script >
+function print_number () {
+    let number = document.getElementById ("number").value;
+    for ( let i = 0 ; i <= number ; i++){
+        let node = document.createElement ("div");
+        let textnode = document.createTextNode (i);
+        node.appendChild (textnode)
+        if ( i%2 === 0 ){
+            node.className = "red";
+            document.getElementsByTagName ("body")[0].appendChild (node)
+            // document.getElementById ("result").appendChild (node)
+        }
+        else {
+            node.className = "blue";
+            document.getElementsByTagName ("body")[0].appendChild (node)
+            // document.getElementById ("result").appendChild (node)
+        }
+    }
+}
+
+
+// function chu(n) {
+//     // let k = document.getElementById ("doanvan");
+        
+//     for ( let i=0; i <n ; i++){
+//         if ( i%2 === 0) {
+//           document.write ("<p style ='color:red'> "i "/p>")
+//         }
+//         else {
+//             document.write ("<p style ='color:blue'> "i "/p>")
+//         }
+//     }
+// }
+// console.log ( chu (100))
+
+
+
+
+
+
+</script>
+</body>
+</html>

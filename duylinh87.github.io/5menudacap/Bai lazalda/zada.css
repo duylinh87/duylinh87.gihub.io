@@ -1,0 +1,208 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+/* .head {
+    background: #233040;
+    height: 100px; */
+    width: 100%;
+    position: relative;
+}
+.head img{
+   width: 10%;
+   position: absolute;
+   top:30%;
+   left: 10%;
+}
+.head p{
+    color: white;
+    position:absolute;
+    top:25%;
+    left: 10%;
+    font-size: 40px
+    
+}
+i {
+    scale: 200;
+    background: white;
+    height: 50px;
+    width:50px;
+}
+.head button{
+    background: #f57224;
+    position:absolute;
+    top:30%;
+    left: 75%;
+    height:40px; 
+    width: 3%;
+}
+.head input{
+    color: white;
+    position:absolute;
+    top:30%;
+    left: 25%;
+    height:40px; 
+    width: 50%;
+}
+h1{
+    text-align: center;
+    background: aliceblue
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    width: 90%;
+    margin: auto ;
+    background: whitesmoke
+}
+.left .menu {
+    width: 100%;
+    height: 390px;
+    background:white;
+    padding-top: 15px;
+    border: 1px solid lavender
+}
+.left .menu li {
+    list-style: none;
+    padding-left: 10px;
+    position: relative;
+    height: 30px;
+    cursor: pointer;
+}
+.left .menu li a {
+    text-decoration: none;
+    color:#757575;
+    font-family: Roboto;
+    font-size: 15px;
+    line-height: 30px
+}
+.left .menu >li::after {
+    content: "";
+    position: absolute;
+    left: 90%;
+}
+.left .menu >li:hover::after{
+    content:" >";
+    line-height: 30px;
+    color:darkturquoise
+}
+.left .menu li:hover {
+    background: whitesmoke
+}
+
+.left .menu li:hover >a{
+    color:darkturquoise;
+ 
+}
+.left .sub-menu{
+    background: white;
+    position: absolute;
+    top:-52%;
+    left: 100%;
+    width: 100%;
+    display: none;
+    border: 1px solid lavender;
+    z-index: 4;
+}
+.left .sub-menu {
+    padding-top: 15px
+}
+.left .menu li:hover .sub-menu {
+    display: block
+}
+.left .sub-menu #mot:hover::after{
+    content:" ";
+}
+.left .sub-menu2 {
+    background: white;
+    position: absolute;
+    top:-255%;
+    left: 100%;
+    width: 100%;
+    display: none;
+    border: 1px solid lavender;
+    padding-top: 15px;
+}
+.left .sub-menu li:hover .sub-menu2{
+    display: block
+}
+.left .sub-menu .item::after {
+    content:" ";
+    position: absolute;
+    left: 90%;
+}
+.left .sub-menu > .item:hover::after{
+    content:">";
+    line-height: 30px;
+    color:darkturquoise
+}
+    .top{
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        right: 10px;
+        bottom: -10px
+    }
+.right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    padding: 10px;
+    
+}
+.right .sp1{
+    transition: 0.5s;
+    cursor: pointer;
+    background: white
+}
+
+.right .sp1:hover{
+  box-shadow: 0px 5px 5px 0px  darkgray;
+}
+
+.right .sp1 p{
+    text-align: center;
+    position: relative;
+    top: -7%;
+    left: 0%; 
+}
+.right .sp1 .img {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;    
+}
+.right .sp1 .smallimg{
+    width: 25%;
+   
+    position: relative;
+    top: -10%;
+    left: 36%;
+    overflow: hidden;
+}
+.right .sp1 img {
+    width: 100%;
+
+}
+#banner {
+    animation: nhay 30s  infinite;
+     height: 400px;
+    width:90%;
+    margin: auto;
+    background-image: url("./anh/bialazada2.jpg")
+}
+@keyframes nhay {
+    0%{background-image: url("./anh/bialazada2.jpg")}
+    50% { background-image: url("./anh/bailazada1.jpg");
+    }
+    100% {background-image: url("./anh/lazada3.jpg");
+    }
+}
+
+.footer {
+    background: #757575;
+    height: 200px;
+}
+   
+   

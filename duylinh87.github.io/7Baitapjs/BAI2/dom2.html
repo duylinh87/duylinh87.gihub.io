@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <link rel="stylesheet" href="dom2.css">
+     <!-- <script src="./dom2.js"></script> -->
+     <style>
+
+       input {
+         margin: 10px;
+         padding: 5px;
+         background: aqua
+       }
+       form {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%,-50%);
+         border: 2px solid lightcoral;
+         padding: 10px;
+         box-shadow: 3px 3px 3px 3px black
+       }
+     </style>
+</head>
+<body>
+<form>
+  Nhập Số <input type ="text" id="nhapso" value="0">
+  <input type ="button" id ="bp" value ="binhphuong" onclick="binhphuong()">
+  <input type ="button" id ="bp" value ="theky" onclick="theky()">   
+  <input type ="button" id ="bp" value ="catchuoi" onclick="catchuoi()">   
+  <input type ="button" id ="bp" value ="viethoa" onclick="viethoa()"> </br>
+  Kết Quả <input type ="text" id = "ketqua" value="0">
+  <!-- <p id ="ketqua">dddf</p> -->
+</form>
+<script>
+  // bai 1
+  function binhphuong() {
+   let a = document.getElementById ("nhapso").value;
+    document.getElementById ("ketqua").value =a*a;
+    //  document.getElementById("ketqua").innerHTML = a*a
+  }
+// bai2
+ function theky(){
+  let a = document.getElementById ("nhapso").value;
+  if (a % 100 === 0) {
+    document.getElementById ("ketqua").value = a/100
+  } 
+   else{ document.getElementById ("ketqua").value =Math.floor (a/100)+1}
+  }
+//
+function viethoa() {
+  let a = document.getElementById ("nhapso").value;
+  let chudau = a.charAt(0);
+  let vh = chudau.toUpperCase()
+  let doansau = a.slice(1);
+  let vt =doansau.toLowerCase()
+    document.getElementById ("ketqua").value = vh +vt
+}
+function catchuoi() {
+  let a = document.getElementById ("nhapso").value;
+
+  let doansau = a.slice(0,10);
+  let vt =doansau.toLowerCase()
+    document.getElementById ("ketqua").value = vt +'...'
+}
+</script>
+</body>
+</html>

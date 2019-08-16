@@ -1,0 +1,119 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box
+}
+body{
+    font-family: 'playfair_display';
+    font-size: 14px;
+    color:#626262
+}
+
+header {
+    margin-top: 30px
+}
+
+img{
+    cursor: pointer;
+}
+.row img{
+    margin-top: 20px
+}
+.navbar {
+    font-family: 'inconsolata';
+    text-transform: uppercase;
+    background: white!important
+}
+.navbar-nav {
+   margin-left: 30%
+}
+.container.one{
+    padding: 100px 15px 100px 50px;
+    display: flex
+}
+.description.left{
+    flex: 70%
+}
+.description.rigth{
+    flex: 30%;
+    padding-left: 30px
+}
+.nav-item {
+    margin-left:  92px ;
+}
+
+ /* .posts {
+    margin-top: 100px
+}   */
+.card{
+    /* margin-right: 60px; */
+
+    border: none
+}
+.card-body{
+    padding-left: 0
+}
+
+.login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center
+}
+.login >input{
+    margin-top: 80px;
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+    width: 390px;
+    padding: 5px
+}
+
+.login >input:focus {
+    background: floralwhite
+}
+.login h1{
+    min-width: 450px;
+}
+.container-fluid  {
+    height: 500px;
+    background: #f0f0f0;
+    max-width: 1500px;
+}
+.row{
+padding-top: 100px
+
+}
+.container-fluid.two  {
+    height: 100px;
+    margin-top: 400px;
+}
+
+.container.foot{
+    padding: 40px 80px 0 80px;
+    display: flex;
+    justify-content: space-between; 
+}    
+span {
+    margin: 10px
+}
+.col-md-4{
+    padding: 30px
+}
+@media (max-width:767.98px) {
+    .container.one {   
+      flex-direction: column;
+      padding: 100px 15px 100px 15px;
+    }
+    .description.rigth{
+      margin-top: 30px;
+      padding-left: 0px
+    }
+    .container-fluid {
+        height: 1200px;
+    }
+  }
+
+
+

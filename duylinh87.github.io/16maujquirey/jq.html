@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Travel ODIGO</title>
+    <!-- <link rel="icon" href="img/fa-icon/favicon.ico"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./jq.css">
+    <link rel="shortcut icon" type="image/png" href="./Anh/Icon.png">
+</head>
+
+<body>
+
+    <h5> bai 1 : 1. Kiểm tra dữ liệu nhập vào có đúng độ dài theo yêu cầu không (ở đây mình check length là 8).</h5>
+    <!-- <div class="container">
+        <form action="#" method="POST" role="form">
+            <legend>Yêu cầu nhập trên 8 ký tự thì cho phép Submit</legend>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="tài khoản">
+            </div>
+
+            <button type="submit" class="btn btn-primary" disabled="disabled">Submit</button>
+        </form>
+    </div> -->
+
+    <h5> bai 2 : Validate form đăng ký bằng jQuery</h5>
+    <!-- <div class="container">
+        <form action="#" method="POST" role="form">
+            <legend>Validate dữ liệu đầu vào</legend>
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="tài khoản">
+            </div>
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="mật khẩu">
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="email">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" id="phone" placeholder="số điện thoại">
+            </div>
+            <button type="submit" class="btn btn-primary">Đăng ký</button>
+        </form>
+    </div> -->
+    <h5> bai 3 : Thêm và xóa khối HTML</h5>
+    <div class="container">
+        <form action="#" method="POST" role="form">
+            <legend>Thêm & xóa khối HMTL</legend>
+            <div class="block">
+                <div class="form-group parent_div">
+                    <input type="text" class="form-control input" placeholder="input">
+                    <button type="button" class="btn btn-danger btn_del">Xóa</button>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary btn_add">Thêm</button>
+        </form>
+    </div>
+
+    <h5> bai 4 : Thay đổi màu nền khi thay đổi Select option</h5>
+    <div class="background">
+        <div id="background-default">
+            <select class="form-control select">
+                <option value="">Chọn</option>
+                <option value="1">Đỏ</option>
+                <option value="2">Xanh</option>
+                <option value="3">Vàng</option>
+                <option value="4">Đen</option>
+            </select>
+        </div>
+    </div>
+
+<h5> bai 5:Sử dụng thông báo với Modal Bootstrap
+        (thay thế tốt cho alert mặc định của trình duyệt)</h5>
+    <div class="container">
+        <legend>Sử dụng thông báo với Modal Bootstrap</legend>
+        <input type="text" class="form-control" id="input" placeholder="hãy gõ cái gì đó vào đây...!" value="">
+        <br>
+        <button class="btn btn-info">Click để xem</button>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-md">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Welcome to tinhyeucongnghe.net</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn vừa gõ : <span id="content">Hãy gõ cái gì đó vào ô input đi bạn !</span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <h5> bai 7 : Validate form đăng nhập
+        
+    </h5>
+    <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                    
+                    <form action="" method="POST" role="form">
+                        <legend>Validate form</legend>
+    
+                        <div class="form-group">
+                            <label for="">Tài khoản</label>
+                            <input type="text" class="form-control username" placeholder="tài khoản">
+                        </div>
+                        <div class="form-group">
+                            <label for="">Mật khẩu</label>
+                            <input type="password" class="form-control password" placeholder="mật khẩu từ 4-18 ký tự">
+                        </div>
+                        <div class="form-group">
+                            <span class="text-danger hidden error"></span>
+                <span class="text-success hidden success">Bạn đã nhập đúng yêu cầu !</span>
+                        </div>
+                        <button type="button" class="btn btn-primary login">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+964.5DzO0rT7abK41JStQIAqVgRVzpbzo4.5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty4.5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src='./jq.js'></script>
+</body>
+
+</html>

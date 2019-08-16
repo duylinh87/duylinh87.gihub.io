@@ -1,0 +1,21 @@
+*{
+    margin: auto;
+    padding: 0;
+    box-sizing: border-box
+}
+
+table ,tr, td {
+    border: 1px solid black;
+    border-collapse: collapse
+}
+tr, td {
+    padding: 10px
+}
+table {
+    width: 90%;
+}
+
+thead {
+    background: aqua;
+    text-align: center
+}

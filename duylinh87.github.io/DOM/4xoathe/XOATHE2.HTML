@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       table ,td {
+           border: 1px solid black;
+           border-collapse: collapse;
+           overflow: hidden;
+        
+       }
+       table {
+           margin: 40px
+       }
+        TD {
+           text-align: center;
+           font-size: 15px;
+            /* height: 150px;
+           width: 150px; */
+
+       }
+       table .head {
+           background: darkgray;
+           height: 30px;
+           color: white
+       }
+       table img {
+           width: 100px;
+           height: 100px;
+           padding: 5px;
+           transition: 1s;
+           cursor: pointer;
+       }
+        img:hover {
+           scale: 1.2;
+           background:  darkgray
+       }
+       input {
+        cursor: pointer;    
+       }
+   
+
+    </style>
+
+
+</head>
+
+<body>
+    <table>
+
+        <tr class = "head">
+            <td> SỐ TT</td>
+            <td> HÌNH ẢNH</td>
+            <td> TÙY CHỌN</td>
+        </tr>
+        <tr>
+            <td> 
+                   thông tin sp1
+            </td>
+            <td> <img src="./../../5menudacap/Bai lazalda/anh/balo1.jpg"></td>
+            <td> <input type="button" value="xóa">
+            </td>
+        </tr>
+        <tr>
+            <td>Sản phẩm ba lô số 2</td>
+            <td> <img src="./../../5menudacap/Bai lazalda/anh/blo4.jpg"></td>
+            <td> <input type="button" value="xóa">
+
+            </td>
+        </tr>
+        <tr>
+            <td>Sản phẩm ba lô số 3</td>
+            <td> <img src="./../../5menudacap/Bai lazalda/anh/balo2.jpg"></td>
+            <td> <input type="button" value="xóa">
+
+            </td>
+        </tr>
+        <tr>
+            <td>Sản phẩm ba lô số 4</td>
+            <td> <img src="./../../5menudacap/Bai lazalda/anh/balo3.jpg"></td>
+            <td> <input type="button" value="xóa">
+
+            </td>
+        </tr>
+    </table>
+<script>
+    // bai tap xoa the tren 1 dong khi ta kich vào nut button
+onload = function () {
+    let button = document.getElementsByTagName ("input");
+    for ( let i = 0 ; i <= button.length ; i++){
+        button[i].addEventListener ( "click", function () {
+            let parsent = this.parentElement.parentElement;
+            parsent.remove()
+        }
+        )
+    }
+}
+
+</script>
+
+
+</body>
+
+</html>

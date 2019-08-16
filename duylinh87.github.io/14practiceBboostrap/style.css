@@ -1,0 +1,10 @@
+
+.row {
+    position: relative;
+}
+.one{
+ position: absolute;
+   top: 33.3333%;
+   left: 50%;
+   background: darkgoldenrod
+}

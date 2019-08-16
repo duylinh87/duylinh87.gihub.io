@@ -1,0 +1,133 @@
+    *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        /* background: lemonchiffon */
+    }
+    #menuchinh {
+        background:whitesmoke;
+        height: 50px;
+    }
+    #menuchinh >.menu {
+        display: flex;
+        justify-content: center;
+        line-height: 47px
+    }
+    #menuchinh .menu li{
+        list-style: none;
+        /* overflow: hidden; */
+        /* position: relative; */
+    }
+    #menuchinh .menu >li> a {
+        text-decoration: none;
+        padding: 15px;
+        font-weight: 700;
+        font-size: 15px;
+        color: dimgray;
+    }
+    #menuchinh .menu >li> a::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        background:  dimgray;
+        transition: 0.3s;
+    }
+    #menuchinh .menu >li> a:hover::after{
+        width: 100%;
+    }
+    #menuchinh .menu li a:hover {
+        color: fuchsia
+    }
+    #menuchinh  .sub-menu {
+        height: 330px;
+        width: 610px;
+        background: whitesmoke;
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        /* grid-gap: 2px; */
+        display: none;
+        position: absolute;
+        top:50px;
+       
+    }
+    #menuchinh .sub-menu .item1{
+        background: white
+    }
+
+    #menuchinh .menu li:hover .sub-menu{
+        display: grid
+    }
+    #menuchinh .sub-menu .item1 h5{
+        padding-left:  15px;
+        padding-top: 5px;
+        padding-bottom: 0px
+    }
+    #menuchinh .sub-menu .item1 >ul{
+        line-height: 40px
+    }
+    #menuchinh .sub-menu .item1 a {
+        text-decoration: none;
+        padding-left: 15px;
+
+        color: black;
+        display: block
+    }
+    /* .sub-menu .item1> ul .last{
+        padding-bottom: 15px
+    } */
+    #menuchinh .sub-menu .item1 a:hover{
+        background: whitesmoke
+    }
+
+
+    /* sử dụng kiến thức:
+    + display: flex , grid , none
+    + Biến thẻ từ inline trong block;
+    + line -height : chia để tổng chiều cao thẻ a và hiệu ứng gạch chân bằng chiều cao div menu
+    + Sử dụng positon hiệu chỉnh cấp 2 và không làm cấp cha bị giãn theo
+    + Sử dụng posude element after cho hiệu ứng gạch chân;
+    +Sử dụng dấu mũi tên > để cấp cháu không bị ảnh hưởng
+    +Lưu ý padding cho thẻ a để người dùng trỏ chuột được nhiều hơn, không dùng margin */
+
+#container {
+    width:80%;
+    margin: auto;
+}
+
+#container  #bia{
+     height:330px;
+     overflow: hidden;
+ }   
+ #container  #bia img {
+     width: 100%;  
+ } 
+
+ #container  #container1 {
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr 1fr ;
+     grid-gap: 30px;    
+     height: 340px; 
+     padding-left: 20px ;
+     padding-right: 20px
+ }
+ #container  #container1 .item {
+     /* width: 100%; */
+     overflow: hidden;
+     background: white
+ }
+ #container h2{
+     padding: 20px 20px;
+     font-weight: 700
+ }
+ #container p{
+     text-align: center;
+     font-weight: 700;
+     padding: 5px;
+ }
+ #container .item> img {
+width: 100%;
+height:80%;
+ }
