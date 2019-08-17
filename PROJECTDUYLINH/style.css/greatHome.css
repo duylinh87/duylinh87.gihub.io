@@ -516,6 +516,7 @@ header .divtitle {
  .project button{
    margin :40px 0 40px 0
   }
+  /* //////khuyenmai */
   #khuyenmai {
     background-image: url('./../Image/Home/banner.jpg') ;
     height:600px;
