@@ -627,13 +627,14 @@ footer {
     cursor: pointer;
     margin-left: 10px;
     margin-right: 10px;
-    border: 1px solid lightseagreen;
-    width: 40px;
-    height: 40px;
+    border: 1px solid ;
+    width: 30px;
+    height: 30px;
     text-align: center;
-    padding: 5px;
+    padding: 3px;
+    
     font-size: 17px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
 }
 .footer-bot .facbook {
     background: #4A62A3;
