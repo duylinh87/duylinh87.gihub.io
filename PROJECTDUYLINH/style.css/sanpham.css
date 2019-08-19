@@ -1,0 +1,145 @@
+.banner {
+    height :40vh;
+    background-image: url('./../Image/bia4.jpg') ;
+    background-repeat :no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.banner::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40VH;
+    background: rgba(0,0,0,0.3  );
+    z-index: 5;
+}
+body{
+    background: #f8f8f8f8
+}
+.content .left {
+    border: 1px solid lightgrey;
+    /* height: 800px; */
+
+}
+.product {
+    background:white;
+    transform: translateY(-25px);
+    position: relative;
+    margin: auto;
+    width: 90%;
+    z-index: 7;
+}
+ .title {
+    height: 70px; 
+    border: 1px solid lightgrey;
+    margin-bottom: 20PX
+}
+         /* san pham ban chạy */
+
+.card-body {
+    padding: 0
+}
+ .card{
+    border-radius: 0;
+    transition: 1s;
+}
+ .card:hover{
+    box-shadow:  0px 0px 5px 1px grey;
+    transform: translateY(5px)
+}
+ .nav-tabs {
+    border-bottom: none
+}
+.container span{
+    color: #630005;
+    font-size: 20px
+}
+ .sale:hover {
+    background: #c7ecee;  
+}
+ .sale{
+    font-size: 12px;
+    background: none;
+    color: #333333;
+    width: 75px;
+    height: 25px;
+    padding: 2px;
+    box-shadow: 0px 0px 2px 1px grey;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 20px
+}
+
+ .price{
+    background: darkgrey;
+    color: black
+}
+ .imgFather{
+    overflow: hidden
+}
+ .imgFather img{
+    transition: 2s;
+    cursor: pointer;
+}
+ .imgFather:hover img{
+    transform: scale(1.1)
+}
+  a {
+    color: #333333
+}
+
+
+ h4 {
+    /* color: #336699; */
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    text-transform: uppercase;
+    position: relative;
+}
+h5 {
+    font-size: 14px;
+}
+li {
+    list-style: none;
+}
+.product-group, .sub-group {
+    width: 100%;
+    text-align: left;
+    transition: all 0.4s ease;
+}
+.product-group,.sub-group {
+    padding: 0 15px;
+    background: transparent;
+    border: none;
+}
+.nav-title h4::before{
+    content: '';
+    width: 4px;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #333333
+/* transition: 3s */
+}
+/* .nav-title h4:active::before {
+    height: 100%;  
+} */
+  .navbar-form {
+    display: flex;
+    align-items: center;
+    border-top: none;
+}
+@media (max-width: 786px){
+
+ 
+    .banner {
+        z-index: -1;
+        background-attachment: inherit
+    }}
