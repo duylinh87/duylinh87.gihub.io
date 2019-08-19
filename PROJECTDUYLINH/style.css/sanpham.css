@@ -17,6 +17,16 @@
     background: rgba(0,0,0,0.3  );
     z-index: 5;
 }
+.menu.fix {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background:white;
+    top:0;
+    box-shadow:  0px 2px 2px 2px #DCDCDC;  
+    height: 60px;
+    padding: 5px 5px 5px;
+}
 body{
     background: #f8f8f8f8
 }
@@ -32,6 +42,9 @@ body{
     margin: auto;
     width: 90%;
     z-index: 7;
+}
+.product-group.active, .sub-group.active {
+    background: #e7e7e7;
 }
  .title {
     height: 70px; 

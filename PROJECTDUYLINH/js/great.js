@@ -53,10 +53,28 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: 0 }, 1500);
     return false;
   });
+// 2///////// trang sanpham
+  $('[data-toggle="filter-display"]').each(function (){
+    $(this).click( function() {
+        displayTarget = $(this).data('target');
+        $('.product-group, .sub-group').removeClass('active');
+        $(this).addClass('active');
+        $('.col-item').hide();
+        $('.col-item' + displayTarget).fadeIn(600);
+        // $('.col-item').removeAttr('style');
+        // $('.col-item').not(displayTarget).css('display','none');
+    });
+  });
+  $('[data-toggle="display-all"]').on('click', function() {
+    $('.product-group, .sub-group').removeClass('active');
+    $('.col-item').fadeIn(600);
+  });
 });
 //fadein:hien ra tu tu
 //fadeout:mat di tu tu
 //scrollTop
+
+
 
 
 

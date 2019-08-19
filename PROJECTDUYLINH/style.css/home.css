@@ -14,7 +14,17 @@
     }
     100% {background-image: url('./../Image/Home/bia.jpg');
     }}
-
+.menu.fix {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        background:white;
+        top:0;
+        box-shadow:  0px 2px 2px 2px #DCDCDC;  
+        height: 60px;
+        padding: 5px 5px 5px;
+    }
+    
 .about {
     padding: 0 10VW 0
 }
