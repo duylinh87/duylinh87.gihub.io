@@ -17,6 +17,10 @@
     background: rgba(0,0,0,0.3  );
     z-index: 5;
 }
+header .menu {
+  background: white
+    /* border-bottom: 2px solid #333333; */
+}
 .menu.fix {
     position: fixed;
     z-index: 1000;
@@ -67,7 +71,7 @@ body{
  .nav-tabs {
     border-bottom: none
 }
-.container span{
+.container >span{
     color: #630005;
     font-size: 20px
 }
@@ -149,6 +153,82 @@ li {
     align-items: center;
     border-top: none;
 }
+/* // trang chi tiết */
+
+.slick-slide img {
+    display: inline!important;
+    cursor: pointer;
+}
+.single-price {
+    color: #336699;
+    font-size: 20px;
+    margin: 0;
+}
+.description {
+    border-top: solid 1px #e7e7e7;
+    border-bottom: solid 1px #e7e7e7;
+    padding: 30px 0;
+    margin: 20px 0;
+}
+ form.cart {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+}
+ .product-category {
+    margin-top: 20px;
+    padding: 30px 0;
+    border-top: solid 1px #e7e7e7;
+    /* text-transform: uppercase; */
+    font-size: 16px;
+}
+.quantity {
+    font-weight: 600;
+    margin-right: 30px;
+    border: 1px solid #eeeeee;
+    font-size: 16px;
+    width: 150px;
+    text-align: center;
+}
+.add-to-cart {
+
+}
+
+.single-product .cart>.quantity input {
+    width: 30px;
+    text-align: center;
+    border: 0;
+}
+.content  {
+    background: #fff;
+    padding: 30px;
+    clear: both;
+    margin-bottom: 30px
+}
+.respond-wrap input[type="text"], .comment-form textarea {
+    border: 1px solid #e7e7e7;
+    background: #f8f8f8;
+    color: #666666;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    line-height: 22px;
+    font-size: 16px;
+    width: 100%;
+}
+.form-submit,.add-to-cart  {
+    margin: 30px auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    background: #26A69A;
+   
+    color: #fff;  
+}
+
 @media (max-width: 786px){
 
  
@@ -156,3 +236,8 @@ li {
         z-index: -1;
         background-attachment: inherit
     }}
+
+
+
+ 
+

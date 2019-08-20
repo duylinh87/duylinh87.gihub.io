@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> KienTrucGreat</title>
+  <!-- <link rel="icon" href="img/fa-icon/favicon.ico"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css/all.css">
+  <link rel="stylesheet" href="./style.css/sanpham.css">
+  <link rel="stylesheet" type="text/css" href="./puclic/slick-1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./puclic/slick-1.8.1/slick/slick-theme.css" />
+  <!-- <link rel="shortcut icon" type="image/png" href="./Anh/Icon.png"> -->
+</head>
+
+<body>
+  <header>
+    <div class="info">
+      <span class='address'>
+        <i class="fas fa-map-marker-alt"></i>
+        HH01A-ThanhHa-HN
+      </span>
+      <span class='phone ml-4'>
+        <i class="fas fa-phone-volume"></i>
+        0968636309
+      </span>
+      <!-- <span class='gmail ml-4'>
+        <i class="fas fa-envelope-square"></i>
+        Duylinh87.wru@gmail.com
+      </span> -->
+      <span class='login '>
+        <i class="fas fa-user user-top-menu" data-toggle="modal" data-target="#modal-signin"></i>
+        <!-- <i class="fas fa-user user-top-menu" data-toggle="modal" data-target="#modal-signin"></i> -->
+        <div class="modal fade" id="modal-signin" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" style="flex: 1">
+                  <a class="nav-link active" id="sign-in-tab" data-toggle="tab" href="#sign-in-div" role="tab"
+                    aria-selected="true">Đăng nhập</a>
+                </li>
+                <li class="nav-item" style="flex: 1">
+                  <a class="nav-link" id="sign-up-tab" data-toggle="tab" href="#sign-up-div" role="tab"
+                    aria-selected="false">Đăng ký</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade active show" id="sign-in-div" role="tabpanel">
+                  <form>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Email" id="sign-in-email" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Password" id="sign-in-password" required="">
+                    </div>
+                    <div class="modal-login-item-half">
+                      <label style="display:none" class="checkbox-remember-me">Nhớ tài khoản
+                        <input type="checkbox" id="sign-in-remember">
+                        <span class="checkmark"></span>
+                      </label>
+                      <div style="cursor: pointer;" onclick="openForgotPassword()">
+                        <i class="fas fa-question-circle"></i> Quên mật khẩu</div>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                      <button type="button" class="btn btn-green btn-login-modal" id="btn-sign-in">Đăng nhập</button>
+                    </div>
+                    <!-- <div class="text-center" style="margin-bottom: 1rem;">
+                      Hoặc đăng nhập bằng
+                    </div>
+                    <div class="text-center">
+                      <div class="fab google-sign-in">
+                        <img src="/resources/image/google.png">
+                      </div>
+                      <div class="fab facebook-sign-in">
+                        <img src="/resources/image/facebook.png">
+                      </div>
+                      <div class="fab github-sign-in">
+                        <img src="/resources/image/github-sign.svg">
+                      </div>
+                    </div> -->
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="sign-up-div" role="tabpanel">
+                  <form>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Họ tên" id="sign-up-fullname" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Email" id="sign-up-email" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Mật khẩu" id="sign-up-password" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Nhập lại mật khẩu" id="sign-up-retype-password" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <button type="button" class="btn btn-green btn-login-modal" id="btn-sign-up">Đăng ký</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="menu">
+      <div class="logoSmall text-center" style='margin-bottom: -70px ;display: none'>
+        <h1>
+          <span>
+            <span class='logo1 '> G</span>
+            <span class='logo2'> R</span>
+            <span class='logo3 '> <i class="far fa-thumbs-up text-secondary"></i></span>
+            <span class='logo4'> A</span>
+            <span class='logo5'> T</span>
+          </span>
+        </h1>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white pt-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+          <ul class="navbar-nav left   justify-content-around">
+            <li class="nav-item active">
+              <a class="nav-link " href="./index.html">Trang Chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link  " href="./sanpham.html"> Sản Phẩm <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link " href="#">Dự Án <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <div class="logo text-center  ">
+            <h1>
+              <span>
+                <span class='logo1 '> G</span>
+                <span class='logo2'> R</span>
+                <span class='logo3 '> <i class="far fa-thumbs-up text-secondary"></i></span>
+                <span class='logo4'> A</span>
+                <span class='logo5'> T</span>
+              </span>
+            </h1>
+          </div>
+          <ul class="navbar-nav rigth justify-content-around ">
+            <li class="nav-item active">
+              <a class="nav-link " href="#">Chúng Tôi <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link  " href="#"> Phong Thủy <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link  " href="#">Liên Hệ <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- <div class='banner'>
+    </div> -->
+  </header>
+  <section class='chitiet mb-5'>
+    <div class="container row m-auto pt-5">
+      <div class="col-lg-6 m-auto text-center ">
+        <div class='slider-for mb-2 text-center '>
+          <div class='item '><img src='./Image/chitiet/guong1.png' class="img-fluid ">
+          </div>
+          <div class='item'><img src='./Image/chitiet/guong2.png' class="img-fluid "> </div>
+          <div class='item'><img src='./Image/chitiet/guong3.png' class="img-fluid "> </div>
+          <div class='item'><img src='./Image/chitiet/guong4.png' class="img-fluid "> </div>
+          <div class='item'><img src='./Image/chitiet/guong5.png' class="img-fluid "> </div>
+        </div>
+        <div class='slider-nav'>
+          <div class="item ml-2"><img src='./Image/chitiet/guong1.png' class="img-thumbnail"> </div>
+          <div class="item ml-2"><img src='./Image/chitiet/guong2.png' class="img-thumbnail"> </div>
+          <div class="item ml-2"><img src='./Image/chitiet/guong3.png' class="img-thumbnail"> </div>
+          <div class="item ml-2"><img src='./Image/chitiet/guong4.png' class="img-thumbnail"> </div>
+          <div class="item ml-2"><img src='./Image/chitiet/guong5.png' class="img-thumbnail"> </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="summary">
+          <h1 class="product-title">Gương Tròn Dây Da </h1>
+          <div class="single-price">
+            <del>1.800.000 Đ</del>
+            <p >1.200.000 Đ</p>
+          </div>
+          <div class="description">
+            <p>Sản phẩm bán chạy nhất quý I năm 2019.</p>
+          </div>
+          <p class="stock">Tình trạng: <span class="in-stock">Còn hàng</span></p>
+          <form class="cart">
+            <span>Số lượng:</span>
+            <div class="quantity">
+              <button class="qty-decrease" onclick="" type="button">-</button>
+              <input id="qty" type="text" name="quantity" value="1" class="" size="1">
+              <button class="qty-increase" onclick="" type="button">+</button>
+            </div>
+            <div class="cart-button">
+              <button type="submit" class="add-to-cart link-to">Thêm vào giỏ hàng</button>
+              <a href="#"><i class="fa fa-heart-o"></i></a>
+            </div>
+          </form>
+          <div class="product-category">
+            Danh mục: <a href="shop.html">Gương</a>, <a href="shop.html">Gương treo tường</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- // thong tin va nhan xet khach hang -->
+    <section class="content container">
+      <div class=" info">
+        <p><strong>THÔNG TIN SẢN PHẨM</strong></p>
+        <p>Gương tròn dây da là item không thể thiếu của không gian nội thất hiện đại.
+        </p>
+        <p><strong>Chất liệu :</strong> Gương dây da là sản phẩm gương nghệ thuật được các nghệ nhân làm gương thiết kế
+          bằng
+          tay thủ công kết giữa các vật liệu tạo nên gương đó là gỗ, da bao bọc ngoài thành gương và
+          phía trong cùng là gương bỉ </p>
+        <p><strong>Đặc điểm nổi bật :</strong> Dây có tăng đưa có thể điều chỉnh dài ngắn,Đóng gói chắc chắn, đảm bảo
+          không vỡ khi ship tỉnh xa </p>
+        <p><strong> Đường kính </strong>: 50cm</p>
+        <hr>
+      </div>
+      <div class="comments-section">
+        <p><strong>NHẬN XÉT KHÁCH HÀNG</strong></p>
+        <ul class="comments-list">
+          <li class="comment">
+            <div class="comment-wrap">
+              <div class="comment-block">
+                <div class="comment-header">
+                  <span class="comment-author"><a href="#">Bảo Thanh</a></span>
+                  <span>2 tuần trước </span>
+                  <span class="pull-right">
+                    <a class="comment-reply-link" href="#"><i class="fa fa-reply"></i><span class="hidden-sm"> Trả
+                        lời</span></a>
+                  </span>
+                </div>
+                <div class="comment-content">
+                  <p>Chiếc gương quá hoàn hảo. Mình vừa đặt hàng một chiếc , shop kiểm tra lại và ship sớm cho mình nhé!
+                  </p>
+                </div>
+              </div>
+            </div>
+            <ul class="children">
+              <li class="comment">
+                <div class="comment-wrap">
+                  <div class="comment-block">
+                    <div class="comment-header">
+                      <span class="comment-author"><a href="#">Admin</a></span>
+                      <span>2 tuần trước </span>
+                      <span class="pull-right">
+                        <a class="comment-reply-link" href="#"><i class="fa fa-reply"></i><span class="hidden-sm"> Trả
+                            lời</span></a>
+                      </span>
+                    </div>
+                    <div class="comment-content">
+                      <p>Chào chị ạ! Cảm ơn chị đã quan tâm và đặt mua sản phầm này. GREAT đã nhận được đơn đặt hàng của
+                        chị, nhân viên đang tiến hành xuất kho và sẽ giao cho chị trong ngày hôm nay ạ.</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="respond-wrap">
+          <h4 class="comment-reply-title">Viết bình luận</h4>
+          <form class="comment-form">
+            <div class="row">
+              <div class="comment-form-author col-md-6">
+                <input id="author" name="author" type="text" placeholder="Họ tên *" value="" size="30">
+              </div>
+              <div class="comment-form-email col-md-6">
+                <input id="email" name="email" type="text" placeholder="Email *" value="" size="30">
+              </div>
+            </div>
+            <div class="row">
+              <div class="comment-form-comment col-md-12">
+                <textarea placeholder="Bình luận *" id="comment" name="comment" cols="40" rows="6"></textarea>
+              </div>
+              <div class="col-md-12 submit-wrap">
+                <div >
+                    <button type="submit" class="form-submit" >
+                        GỬI BÌNH LUẬN</button>
+                </div> 
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+  </section>
+  <footer>
+    <div class="">
+      <div class="row footer-top m-0">
+        <div class=" col-lg-3 col-md-6 footer-item">
+          <h4>Chủ Sở Hữu WS</h4>
+          <ul>
+            <li>Công Ty CP GREAT Việt Nam</li>
+            <li>Mã số thuế: 0105341857</li>
+            <li>Ngày cấp giấy phép: 02/06/2011</li>
+            <li>Đại diện pháp luật: Mai Văn Bảy</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item">
+          <h4>Thời gian làm việc</h4>
+          <ul>
+            <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
+            <li>Thứ 7: 9AM - 8PM</li>
+            <li>Nghỉ Chủ Nhật và các ngày Lễ Tết</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul>
+            <li><a href="contact.html">Liên hệ & Góp ý</a></li>
+            <li><a href="#">Hướng dẫn mua hàng online</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <!-- <li><a href="#">Chính sách bảo mật</a></li> -->
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item pr-0">
+          <h4>Địa CHỉ</h4>
+          <ul>
+            <li><a href="#">HH01-Thanh Hà-HN</a></li>
+            <li><a href="#">Duylinh87.wru@gmail.com</a></li>
+            <li><a href="#">SĐT:0968636309</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bot d-flex justify-content-center">
+        <div class="facbook iconItem">
+          <a href='#'> <i class="fab fa-facebook-f"></i> </a>
+        </div>
+        <div class="youtube iconItem">
+          <a href='#'> <i class="fab fa-youtube-square"></i></a>
+        </div>
+        <div class="instagram iconItem">
+          <a href='#'> <i class="fab fa-instagram"></i> </a>
+        </div>
+      </div>
+    </div>
+    <div class=" copyright">
+      <p>Copyright 2019 <i class="fa fa-copyright"></i> DuyLinh</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="./puclic/slick-1.8.1/slick/slick.min.js"></script>
+  <script src='./js/sanpham.js'>
+  </script>
+
+
+
+</body>
+
+</html>
