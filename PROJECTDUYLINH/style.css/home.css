@@ -64,6 +64,11 @@ header .divtitle {
    margin: 40px 0 50px;
    width: 220px;
 }
+.btn-info {
+    color: #fff;
+    background: #26A69A;
+    border-color: #26A69A;
+}
               /* san pham moi */
 .newProduce {
     background: #f8f8f8;

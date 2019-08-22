@@ -186,12 +186,11 @@ li {
 .quantity {
     font-weight: 600;
     margin-right: 30px;
-    border: 1px solid #eeeeee;
+    /* border: 1px solid #eeeeee; */
     font-size: 16px;
     width: 150px;
-    text-align: center;
+   
 }
-
 
 .single-product .cart>.quantity input {
     width: 30px;
@@ -223,10 +222,120 @@ li {
     display: inline-block;
     border-radius: 5px;
     background: #26A69A;
-   
     color: #fff;  
 }
 
+
+
+/* //// gio hang */
+@media (min-width: 1400px){
+.container {
+    max-width: 1640px;
+}}
+.cart-container {
+    background: #ffffff;
+    padding: 40px 30px;
+    margin: 40px 0;
+    border: 1px solid #e7e7e7;
+}
+.cart-container table.cart th.product-thumbnail {
+    padding-left: 30px;
+
+}
+.cart-container table.cart .product-thumbnail {
+    width: 20%;
+    padding-left: 20px;
+    /* padding-left: 20px; */
+}
+.cart-container table.cart .product-name, .cart-container table.cart .product-quantity {
+    width: 22%;
+    /* padding-left: 20px; */
+}
+.cart-container table.cart .product-price, .cart-container table.cart .product-subtotal {
+    width: 20%;
+    /* padding-left: 20px;
+} */}
+.quantity >input ,  .quantity >button  {
+    width: 30px;
+    text-align: center
+}
+.product-remove button {
+    background: none;
+    border: 0;
+    outline: none;
+}
+.cart-container table.cart img {
+    width: 85px;
+    height: auto;
+    border: 1px solid #e7e7e7;
+}
+
+.cart-container table.cart th {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 20px 0;
+    color: #ffffff;
+    background: #333333
+    
+}
+.cart-container table.cart td {
+    border-bottom: 1px solid #e7e7e7;
+    padding: 30px 0;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.cart-coupon {
+    margin-bottom: 40px;
+}
+.cart-coupon, .cart-total, .payment-tabs {
+    background: #fff;
+    padding: 30px;
+    border: 1px solid #e7e7e7;
+}
+.cart-coupon input {
+    color: #777;
+    border: 1px solid #ccc;
+    height: 40px;
+    display: block;
+    width: 100%;
+    padding: 0 15px;
+    margin: 25px 0 10px;
+    font-size: 16px;
+}
+.cart-total > table th {
+    width: 80%;
+    font-size: 16px;
+    padding: 6px;
+}
+.cart-total > table .order-total .amount {
+    font-weight: 700;
+    font-size: 22px;
+    color: #630005;
+}
+.btn-info {
+    color: #fff;
+    background: #26A69A;
+    border-color: #26A69A;
+}
+
+/* // dat hang */
+.payment-main {
+    width: 70%;
+    margin: auto;
+    margin-top: 60px
+}
+.payment-tabs {
+    margin-top: 50px;
+    margin-bottom: 50px
+}
+.payment-main input {
+    margin-bottom: 10px
+}
+.form-control{
+    margin-bottom: 10px
+}
 @media (max-width: 786px){
     .banner {
         z-index: -1;
