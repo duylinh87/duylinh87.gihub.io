@@ -41,19 +41,19 @@ $(document).ready(function () {
       });
 
       //gio hang
-      $('td.product-price').each(function () {
-        var item = $(this).text();
-        sum += Number($(this).text());
-        discount = sum * discountRate / 100;
-        total = sum - discount;
-        var qty = $(this).next('td').find('input').attr('value');
-        var subTotal = (Number(item) * Number(qty)).toLocaleString('vi');
-        var num = Number(item).toLocaleString('vi');
-        $(this).text(num);
-        $(this).siblings('.product-subtotal').text(subTotal);
-        $('.cart-subtotal td').text(sum.toLocaleString('vi'));
-        $('.amount').text(total.toLocaleString('vi'));
-      });
+      // $('td.product-price').each(function () {
+      //   var item = $(this).text();
+      //   sum += Number($(this).text());
+      //   discount = sum * discountRate / 100;
+      //   total = sum - discount;
+      //   var qty = $(this).next('td').find('input').attr('value');
+      //   var subTotal = (Number(item) * Number(qty)).toLocaleString('vi');
+      //   var num = Number(item).toLocaleString('vi');
+      //   $(this).text(num);
+      //   $(this).siblings('.product-subtotal').text(subTotal);
+      //   $('.cart-subtotal td').text(sum.toLocaleString('vi'));
+      //   $('.amount').text(total.toLocaleString('vi'));
+      // });
 
       //thanhtoan
       $('.product-quantity input').each(function () {

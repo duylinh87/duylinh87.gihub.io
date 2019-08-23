@@ -8,12 +8,12 @@
     position: relative;
     animation:  nhay 10s  infinite;   
 }
-@keyframes nhay {
+/* @keyframes nhay {
     0%{background-image: url('./../Image/Home/bia.jpg' )}
     50% { background-image: url("./../Image/Home/landmark-81-6.jpg");
     }
     100% {background-image: url('./../Image/Home/bia.jpg');
-    }}
+    }} */
 .menu.fix {
         position: fixed;
         z-index: 1000;
