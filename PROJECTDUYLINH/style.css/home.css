@@ -34,7 +34,7 @@
     /* z-index: 1001; */
 }
 .newProduce .title {
-    margin :0px 0 30px;
+    margin :0px 0 50px;
     padding :60px 0 0px;
     width: 100%;
 }
@@ -86,7 +86,51 @@ header .divtitle {
 .newProduce .row div {
     padding: 0;
 }
-
+.banner-content {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 80%;
+    z-index: 10;
+}
+.item1 .banner-content {
+    top: 3%;
+}
+.item1 .banner-content h3, .item1 .banner-content a {
+    color: #617f1e;
+}
+.item4 .banner-content h3, .item4 .banner-content a {
+    color: #333333;
+}
+.item5 .banner-content h3, .item5 .banner-content a {
+    color: #523004;
+    opacity: 0.7;
+}
+.banner-content h3 {
+    font-weight: 400;
+    font-size: 26px
+}
+.banner-content h3, .banner-content a {
+    text-transform: uppercase;
+}
+.slogan {
+    height :70vh;
+    background-image: url('./../Image/Home/6.jpg') ;
+    background-repeat :no-repeat;
+    background-position:center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    position: relative;
+}
+.slogan-content {
+    position: absolute;
+    top: 35%;
+    left: 20%;
+    width: 100%;
+    z-index: 10;
+    color: #D59039;
+    font-style: italic;
+}
 
          /* san pham ban chạy */
 .topProduce {
@@ -333,8 +377,13 @@ header .divtitle {
     border-bottom: 1px solid white;  
     color: white
 }
+
 .subscribe input:focus {
     outline: none;
+    color: white
+}
+.subscribe input::placeholder {
+ 
     color: white
 }
 .modal-backdrop {
@@ -395,6 +444,15 @@ header .divtitle {
     .policy h5{
         font-size: 18px;
     }
+    .slogan-content {
+        position: absolute;
+        top: 35%;
+        left: 0%;
+        width: 100%;
+        z-index: 10;
+        color: #D59039;
+        font-style: italic;
+    }
     .procedure {
 		height:1200px;
     }
@@ -406,12 +464,16 @@ header .divtitle {
         flex-direction: column;
       }
       .project .panel > *:first-child { transform: translateY(-80%); }
-      /* #khuyenmai {
+      #khuyenmai {
         grid-template-columns: 1fr 
-      } */
+      }
       #khuyenmai .rigth , #khuyenmai .left{
         color: white;
         width: 80%;}
+        #khuyenmai {
+            height: 900px;
+          }
+
       }
       @media (max-width: 600px) {
         .procedure {
@@ -420,6 +482,14 @@ header .divtitle {
         .procedure .title{
             padding-top: 400px
         }
+        .banner-content h3 {
+            font-weight: 400;
+            font-size: 20px
+        }
+        h3 {
+            font-size: 24px 
+        }
+    
     }
 
 

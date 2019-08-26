@@ -1,6 +1,6 @@
 .banner {
     height :40vh;
-    background-image: url('./../Image/bia4.jpg') ;
+    background-image: url('./../Image/biadubi2.jpg') ;
     background-repeat :no-repeat;
     background-position:center;
     background-size: cover;
@@ -8,6 +8,25 @@
     position: relative;
 }
 .banner::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 40VH;
+    background: rgba(0,0,0,0.3  );
+    z-index: 5;
+}
+.bannerphongthuy {
+    height :40vh;
+    background-image: url('./../Image/biadubi.jpg') ;
+    background-repeat :no-repeat;
+    background-position:center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.bannerphongthuy::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -49,6 +68,8 @@ body{
 }
 .product-group.active, .sub-group.active {
     background: #e7e7e7;
+    margin-top: 5px;
+    outline: none
 }
  .title {
     height: 70px; 
@@ -121,6 +142,7 @@ body{
 }
 h5 {
     font-size: 14px;
+    padding-top: 5px 
 }
 li {
     list-style: none;
@@ -336,6 +358,12 @@ li {
 .form-control{
     margin-bottom: 10px
 }
+
+
+
+
+/* // phong thuy */
+
 @media (max-width: 786px){
     .banner {
         z-index: -1;
