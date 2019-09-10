@@ -126,7 +126,6 @@ header .divtitle {
     position: absolute;
     top: 35%;
     left: 20%;
-    width: 100%;
     z-index: 10;
     color: #D59039;
     font-style: italic;
@@ -473,7 +472,6 @@ header .divtitle {
         #khuyenmai {
             height: 900px;
           }
-
       }
       @media (max-width: 600px) {
         .procedure {

@@ -94,7 +94,7 @@ body{
     transform: translateY(-25px);
     position: relative;
     margin: auto;
-    width: 90%;
+    width: 95%;
     z-index: 7;
 }
 .product-group.active, .sub-group.active {
@@ -164,7 +164,7 @@ body{
 
  h4 {
     /* color: #336699; */
-    font-size: 18px;
+    font-size: 14px;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 10px;
@@ -252,7 +252,7 @@ li {
 }
 .content  {
     background: #fff;
-    padding: 30px;
+    padding: 5px;
     clear: both;
     margin-bottom: 30px
 }

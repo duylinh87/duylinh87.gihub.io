@@ -126,7 +126,9 @@ header .menu {
     /* border-bottom: 2px solid #333333; */
 
 }
-
+#sanpham , #chungtoi, #duan, #lienhe, #phongthuy {
+    color: #9e9e9e
+}
 
  .active>.nav-link{
     font-size: 16px;
@@ -318,9 +320,22 @@ footer {
 
 @media (max-width: 576px){
     header .menu {
-        height: 55px;
+        height: 65px;
     }
-
+    .navbar-collapse {
+        background: white;
+        text-align: center;
+        z-index: 20;
+    }
+    .navbar-light .navbar-nav .active>.nav-link {
+      width: 100%;
+    }
+    .header .left {
+        width: 100%
+    } 
+    .phone {
+        display: none
+    }
 }
 
 

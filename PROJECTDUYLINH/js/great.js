@@ -6,13 +6,12 @@
     // phan heder 
 $(function () {
   let $header = $('header .menu');
-  console.log($header)
   if ($header.length) {
     let $offsetTop = $header.offset().top;
         $headerHeight = $header.height();
         $injectSpace = $ ('<div/>',{ height: $headerHeight}).insertAfter($header).hide()
     // console.log($offsetTop)
-    console.log ($headerHeight)
+    // console.log ($headerHeight)
     $(window).scroll( function () {
       // if ($(this).scrollTop() > $offsetTop) {
         if ($(this).scrollTop() > 0) {
@@ -33,7 +32,7 @@ function toggleOpen() {
   this.classList.toggle('open');
 }
 function toggleActive(e) {
-  console.log(e.propertyName);
+  // console.log(e.propertyName);
   if (e.propertyName.includes('flex')) {
     this.classList.toggle('open-active');
   }
