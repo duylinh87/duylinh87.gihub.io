@@ -1,0 +1,360 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: 'Roboto',sans-serif;
+
+}
+                 /* tieu de */
+header .login {
+    float: right;
+}  
+header .login .modal-content {
+
+    width: 320px;
+}
+.modal{
+    top:75px;
+    left: 90px
+}
+header .login i{
+    cursor: pointer;
+    font-size: 18px;
+    margin-right: 20px;   
+}
+#khuyenmai1 {
+    animation:  londan 1s  infinite;
+    display: inline-block
+}
+@keyframes londan {
+    0%{transform: scale(1);}
+    50% { transform: scale(1.2)}
+    100% {transform: scale(1)}  
+}
+header .login #modal-signin .nav-tabs .nav-link {
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    text-align: center;
+    color: #464646;
+    background-color: #1e3c740f;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    
+}
+
+header .login #modal-signin .nav-tabs .nav-link.active {
+    background-color: white;
+}
+header .login .nav-tabs .nav-link.active {
+    border-color: #dee2e6 #dee2e6 #fff;
+}
+header .login .nav-tabs .nav-link {
+    border: 1px solid transparent;
+}
+header .login #sign-in-div, #sign-up-div, #forgot-password .modal-content {
+    padding: 3rem;
+}
+header .login .tab-content>.active {
+    display: block;
+}
+header .login .fade {
+    transition: opacity .15s linear;
+}
+header .login form {
+    display: block;
+    margin-top: 0em;
+}
+header .login .modal-login-item {
+    margin-bottom: 2rem;
+}
+header .login .modal-login-item input {
+    border: none;
+    border-bottom: 1px solid #9e9e9e;
+    width: 100%;
+}
+header .login *:focus {
+    outline: none !important;
+}
+header .login .btn-login-modal {
+    letter-spacing: .5px;
+    border-radius: 4px;
+    padding: .5rem 1rem;
+    width: 100%;
+    text-transform: uppercase;
+}
+header .login .btn-green {
+    outline: none;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    color: white;
+    background-color:#26A69A;
+    transition: .5s;
+    text-align: center;
+    border-radius: 4px;
+}
+header .login .checkbox-remember-me {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+}
+header .login .btn-primary{
+    color: #212529;
+    font-weight: 500;
+    padding-top: 0;
+    background: #333333;
+}
+header .login .btn-primary:active {
+    background: #333333;
+    color: black;
+    border-color: #333333;
+}
+header .info {
+    padding: 10px 15px 0;
+    font-size: 14px;
+    height: 45px;
+    position: relative;
+    background: #333333;
+    color: white
+}
+header .menu {
+    height: 90px;
+    padding: 15px 15px 0;
+    /* border-bottom: 2px solid #333333; */
+
+}
+#sanpham , #chungtoi, #duan, #lienhe, #phongthuy {
+    color: #9e9e9e
+}
+
+ .active>.nav-link{
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    transition: 1s
+}
+.menu .active>.nav-link:hover {
+    color:#d1ccc0 
+} 
+/* .menu .active>.nav-link::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background:  black;
+    transition: 0.3s;
+} */
+.menu .active>.nav-link::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background:  black;
+    transition: 0.3s;
+}
+.menu .active>.nav-link:hover::after{
+    width: 100%
+}
+.menu .active>.nav-link:hover::before{
+    width: 0
+    }
+.fixed {
+    left: 0;
+    max-width: 100%;
+    overflow: visible;
+    position: fixed !important;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+ 
+}
+
+
+header .rigth ,header .left{
+    width: 40%;
+}
+.menu h1{
+    z-index: 5;
+    opacity: 1.5;
+    display: inline-block;
+    color: black;
+    font-size: 3em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+                  /* phan bia chinh */
+.banner .logo1 ,.banner .logo2 ,.bannerr .logo3 ,
+.banner .logo4 ,.banner .logo5 {
+    font-size: 50px;
+    font-weight: 700;
+    color: black
+}
+
+
+#goTop {
+	font-size: 22px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	border:1px solid #333333;
+	color: #333333;
+	position: fixed;
+	right: 40px;
+	bottom: 40px;
+    z-index: 200;
+    border-radius: 10px;
+	display: none;
+}
+footer {
+	padding-top: 80px;
+	background: #fff;
+	color: #666;
+    font-size: 15px;
+    border-top: 2px solid #333333
+}
+.footer-bot {
+	padding-bottom: 50px;
+}
+.footer-bot .iconItem {
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 1px solid ;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding: 3px;
+    
+    font-size: 17px;
+    /* border-radius: 50%; */
+}
+.footer-bot .facbook {
+    background: #4A62A3;
+    transition: 1s  
+}
+.footer-bot .facbook:hover {
+    background: black
+}
+.footer-bot .facbook > a{
+    color: white
+}
+.footer-bot .youtube {
+    background: red;
+    transition: 1s  
+}
+.footer-bot .youtube:hover {
+    background: black
+}
+.footer-bot .youtube > a{
+    color: white
+}
+
+.footer-item {
+    margin-bottom: 25px;
+    padding-left: 35px
+}
+
+@media (max-width: 600px) {
+	.footer-item {
+		width: 100%;
+	}
+}
+.footer-item ul {
+	list-style: none;
+	padding-left: 0;
+}
+.footer-item ul>li {
+	line-height: 32px;
+}
+.footer-item h4 {
+	text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 0.8;
+    margin-bottom: 25px;
+    margin-top: 0;
+    padding-left: 8px;
+    color: #333;
+    border-left: solid 3px #333333;
+}
+.footer-item a {
+	color: #666;
+	overflow: hidden;
+	display: block;
+	transition: all 0.4s ease;
+}
+.footer-item a:hover {
+	padding-left: 12px;
+	color: #336699;
+}
+
+.copyright p {
+	padding: 5px;
+	text-align: center;
+    background: #333333;
+    color: white;
+    
+}
+
+@media (max-width: 576px){
+    header .menu {
+        height: 65px;
+    }
+    .navbar-collapse {
+        background: white;
+        text-align: center;
+        z-index: 20;
+    }
+    .navbar-light .navbar-nav .active {
+        display: block;
+      width: 90%;
+      border-bottom: 1px solid gray;
+      margin: auto
+     
+    }
+ 
+    .phone {
+        display: none
+    }
+    header .rigth ,header .left{
+        width: 100%;
+        margin-top: 15px
+    }
+    .logo {
+        display: none
+    }
+    .logoSmall {
+        display: block
+    }
+ 
+}
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

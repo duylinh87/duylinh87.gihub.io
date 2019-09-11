@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Sản Phẩm</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css/all.css">
+  <link rel="stylesheet" href="./style.css/sanpham.css">
+  <link rel="stylesheet" href="./puclic/animate.css">
+  <link rel="shortcut icon" type="image/png" href="./Image/logo.png">
+</head>
+
+<body>
+  <header>
+    <div class="info">
+      <span class='address'>
+        <i class="fas fa-map-marker-alt"></i>
+        164VươngThừaVũ-HàNội  
+      </span>
+      <span class='phone ml-4'>
+        <i class="fas fa-phone-volume"></i>
+        0968636309
+      </span>
+      <!-- <span class='gmail ml-4'>
+        <i class="fas fa-envelope-square"></i>
+        Duylinh87.wru@gmail.com
+      </span> -->
+      <span class='login '>
+          <b class=" user-top-menu" data-toggle="modal" data-target="#modal-signin" style= "cursor: pointer"> Đăng ký | Đăng Nhập</b> 
+        <div class="modal fade" id="modal-signin" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" style="flex: 1">
+                  <a class="nav-link active" id="sign-in-tab" data-toggle="tab" href="#sign-in-div" role="tab"
+                    aria-selected="true">Đăng nhập</a>
+                </li>
+                <li class="nav-item" style="flex: 1">
+                  <a class="nav-link" id="sign-up-tab" data-toggle="tab" href="#sign-up-div" role="tab"
+                    aria-selected="false">Đăng ký</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade active show" id="sign-in-div" role="tabpanel">
+                  <form>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Email" id="sign-in-email" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Password" id="sign-in-password" required="">
+                    </div>
+                    <div class="modal-login-item-half">
+                      <label style="display:none" class="checkbox-remember-me">Nhớ tài khoản
+                        <input type="checkbox" id="sign-in-remember">
+                        <span class="checkmark"></span>
+                      </label>
+                      <div style="cursor: pointer;" onclick="openForgotPassword()">
+                        <i class="fas fa-question-circle"></i> Quên mật khẩu</div>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                      <button type="button" class="btn btn-green btn-login-modal" id="btn-sign-in">Đăng nhập</button>
+                    </div>
+
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="sign-up-div" role="tabpanel">
+                  <form>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Họ tên" id="sign-up-fullname" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Email" id="sign-up-email" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Mật khẩu" id="sign-up-password" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Nhập lại mật khẩu" id="sign-up-retype-password" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <button type="button" class="btn btn-green btn-login-modal" id="btn-sign-up">Đăng ký</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="menu">
+      <div class="logoSmall text-center" style='margin-bottom: -70px ;display: none'>
+        <h1>
+          <span>
+            <span class='logo1 '> G</span>
+            <span class='logo2'> R</span>
+            <span class='logo3 '> <i class="far fa-thumbs-up text-secondary"></i></span>
+            <span class='logo4'> A</span>
+            <span class='logo5'> T</span>
+          </span>
+        </h1>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white pt-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+          <ul class="navbar-nav left   justify-content-around">
+            <li class="nav-item active">
+              <a class="nav-link " href="./index.html">Trang Chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link  " href="#" id='sanpham'> Sản Phẩm <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link " href="./duan.html">Dự Án <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <div class="logo text-center  ">
+            <h1>
+              <span>
+                <span class='logo1 '> G</span>
+                <span class='logo2'> R</span>
+                <span class='logo3 '> <i class="far fa-thumbs-up text-secondary"></i></span>
+                <span class='logo4'> A</span>
+                <span class='logo5'> T</span>
+              </span>
+            </h1>
+          </div>
+          <ul class="navbar-nav rigth justify-content-around ">
+            <li class="nav-item active">
+              <a class="nav-link " href="./chungtoi.html">Chúng Tôi <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link  " href="./phongthuy.html"> Phong Thủy <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link  " href="./lienhe.html">Liên Hệ <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class='banner'>
+    </div>
+  </header>
+  <section class='product container p-0'>
+    <div class='title text-center'>
+      <H3 class='p-3'> SẢN PHẨM NỘI THẤT</H3>
+    </div>
+    <div class="content row m-0">
+      <div class="col-lg-3 left mt-3 p-3">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white pt-0">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+            aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent2">
+            <ul class="p-0">
+              <li class="search-box">
+                <div class="nav-title">
+                  <h4>Tìm sản phẩm</h4>
+                </div>
+                <form class="navbar-form">
+                    <div class="form-group m-0 p-0">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  </form>
+                
+              </li>
+              <li class="nav-title"><a data-toggle="display-all">
+                  <h4>Danh mục sản phẩm</h4>
+                </a></li>
+              <li><button class="product-group" type="button" data-toggle="filter-display" data-target=".ghe">
+                  <h4>| Ghế</h4>
+                </button>
+                <ul class="nested-tab pl-1">
+                  <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".ghevanphong">
+                      <h5>Ghế văn Phòng (2)</h5>
+                    </button></li>
+                  <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".ghenhahang">
+                      <h5>Ghế nhà hàng (3)</h5>
+                    </button></li>
+                  <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".ghesanvuon">
+                      <h5>Ghế ngồi sân vườn (1)</h5>
+                    </button></li>
+                    <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".ghebanan">
+                        <h5>Ghế bàn ăn (2)</h5>
+                      </button></li>
+                </ul>
+              </li>
+              <li><button class="product-group" type="button" data-toggle="filter-display" data-target=".tubep">
+                  <h4>| Tủ Bếp</h4>
+                </button>
+                <ul class="nested-tab pl-1">
+                  <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".tubep01">
+                      <h5>Tủ Bếp loại 1 (1)</h5>
+                    </button></li>
+                  <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".tubep02">
+                      <h5>Tủ Bếp loại 2 (1)</h5>
+                    </button></li>
+                  <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".tubep03">
+                      <h5>Tủ Bếp loại 3 (1)</h5>
+                    </button></li>
+                  <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".tubep04">
+                      <h5>Tủ Bếp loại 4 (1)</h5>
+                    </button></li>
+                </ul>
+              </li>
+              <li><button class="product-group" type="button" data-toggle="filter-display" data-target=".tranh">
+                  <h4>| Tranh </h4>
+                </button>
+                <ul class="nested-tab pl-1">
+                  <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".tranh01">
+                      <h5>Tranh bộ 1 (1)</h5>
+                    </button></li>
+                  <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".tranh02">
+                      <h5>TTranh bộ 2 (1)</h5>
+                    </button></li>
+                  <li><button class="sub-group" type="button" data-toggle="filter-display" data-target=".tranh03">
+                      <h5>Tranh bộ 3 (1)</h5>
+                    </button></li>
+                </ul>
+              </li>
+              <li><button class="product-group" type="button" data-toggle="filter-display" data-target=".decor">
+                  <!-- <h4>Xem Thêm</h4> -->
+                </button></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="col-lg-9 right">
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mt-3 col-item ghe ghesanvuon " Ghế sân vườn MS01>
+            <div class="card m-auto">
+              <div class='imgFather'>
+               <a href="./chitiet.html"> <img src="./Image/Home/Rectangle 6.png" class="img-thumbnail" alt="...">    </a> 
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế sân vườn MS01
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>400.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item tubep tubep03  " Tủ bếp loại 3 MS03>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <a href="#"> <img src="./Image/Home/Rectangle 6 (1).png" alt="ghế nhà hàng" class="img-thumbnail">
+                </a>
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tủ bếp loại 3 MS03
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>34.000.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item ghe ghevanphong" Ghế văn phòng MS01>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <a href="#"> <img src="./Image/Home/Rectangle 6 (2).png" alt="ghế nhà hàng" class="img-thumbnail">
+                </a>
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế văn phòng MS01
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>11.200.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item tranh tranh01 bounceInUp " Tranh bộ MS01>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <a href="#"> <img src="./Image/Home/Rectangle 6 (3).png" alt="ghế nhà hàng" class="img-thumbnail">
+                </a>
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tranh bộ MS01
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>700.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item ghe ghebanan bounceInUp " Ghế bàn ăn MS01>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (4).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế bàn ăn MS01
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>300.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item tubep tubep04 bounceInUp " Tủ bếp loại 4 MS04>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (5).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tủ bếp loại 4 MS04
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>43.000.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item ghe ghenhahang" Ghế nhà hàng MS01>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (6).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế nhà hàng MS01
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body pl-3 pr-3">
+
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>1.200.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item tubep tubep02 bounceInUp " Tủ bếp loại 2 MS02>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (7).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tủ bếp loại 2 MS02
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>54.000.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item ghe ghevanphong" Ghế Văn phòng MS02>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (8).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế Văn phòng MS02
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>700.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item tranh tranh02 bounceInRight " Tranh bộ MS02>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (9).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tranh bộ MS02
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>1.200.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item ghe ghebanan" Ghế bàn ăn MS02>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (10).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế bàn ăn MS02
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>200.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item tranh tranh03 bounceInRight " Tranh bộ MS03>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (11).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tranh bộ MS03
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>1.000.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item ghe ghenhahang" Ghế nhà hàng MS02>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (12).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế nhà hàng MS02
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body pl-3 pr-3">
+
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>1.100.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item tubep tubep01 bounceInRight " Tủ bếp loại 1 MS1>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (13).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tủ bếp loại 1 MS1
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>400.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-3 col-item ghe ghenhahang" Ghế nhà hàng MS03>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (14).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế nhà hàng MS03
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body pl-3 pr-3">
+
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>900.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="">
+      <div class="row footer-top m-0">
+        <div class=" col-lg-3 col-md-6 footer-item">
+          <h4>Chủ Sở Hữu WS</h4>
+          <ul>
+            <li>Công Ty CP GREAT Việt Nam</li>
+            <li>Mã số thuế: 0105341857</li>
+            <li>Ngày cấp giấy phép: 02/06/2011</li>
+            <li>Đại diện pháp luật: Mai Văn Bảy</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item">
+          <h4>Thời gian làm việc</h4>
+          <ul>
+            <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
+            <li>Thứ 7: 9AM - 8PM</li>
+            <li>Nghỉ Chủ Nhật và các ngày Lễ Tết</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul>
+            <li><a href="contact.html">Liên hệ & Góp ý</a></li>
+            <li><a href="#">Hướng dẫn mua hàng online</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <!-- <li><a href="#">Chính sách bảo mật</a></li> -->
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item pr-0">
+          <h4>Địa CHỉ</h4>
+          <ul>
+            <li><a href="#">HH01-Thanh Hà-HN</a></li>
+            <li><a href="#">Duylinh87.wru@gmail.com</a></li>
+            <li><a href="#">SĐT:0968636309</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bot d-flex justify-content-center">
+        <div class="facbook iconItem">
+          <a href='#'> <i class="fab fa-facebook-f"></i> </a>
+        </div>
+        <div class="youtube iconItem">
+          <a href='#'> <i class="fab fa-youtube-square"></i></a>
+        </div>
+        <div class="instagram iconItem">
+          <a href='#'> <i class="fab fa-instagram"></i> </a>
+        </div>
+      </div>
+    </div>
+    <div class=" copyright">
+      <p>Copyright 2019 <i class="fa fa-copyright"></i> DuyLinh</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src='./js/sanpham.js'> </script>
+  
+
+
+</body>
+
+</html>

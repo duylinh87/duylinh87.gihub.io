@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chúng Tôi</title>
+  <!-- <link rel="icon" href="img/fa-icon/favicon.ico"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css/all.css">
+  <link rel="stylesheet" href="./style.css/sanpham.css">
+  <link rel="stylesheet" type="text/css" href="./puclic/slick-1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="./puclic/slick-1.8.1/slick/slick-theme.css" />
+  <link rel="shortcut icon" type="image/png" href="./Image/logo.png">
+</head>
+
+<body>
+  <header>
+    <div class="info">
+      <span class='address'>
+        <i class="fas fa-map-marker-alt"></i>
+        164VươngThừaVũ-HàNội 
+      </span>
+      <span class='phone ml-4'>
+        <i class="fas fa-phone-volume"></i>
+        0968636309
+      </span>
+      <!-- <span class='gmail ml-4'>
+        <i class="fas fa-envelope-square"></i>
+        Duylinh87.wru@gmail.com
+      </span> -->
+      <span class='login '>
+          <b class=" user-top-menu" data-toggle="modal" data-target="#modal-signin" style= "cursor: pointer"> Đăng ký | Đăng Nhập</b> 
+        <div class="modal fade" id="modal-signin" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" style="flex: 1">
+                  <a class="nav-link active" id="sign-in-tab" data-toggle="tab" href="#sign-in-div" role="tab"
+                    aria-selected="true">Đăng nhập</a>
+                </li>
+                <li class="nav-item" style="flex: 1">
+                  <a class="nav-link" id="sign-up-tab" data-toggle="tab" href="#sign-up-div" role="tab"
+                    aria-selected="false">Đăng ký</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade active show" id="sign-in-div" role="tabpanel">
+                  <form>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Email" id="sign-in-email" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Password" id="sign-in-password" required="">
+                    </div>
+                    <div class="modal-login-item-half">
+                      <label style="display:none" class="checkbox-remember-me">Nhớ tài khoản
+                        <input type="checkbox" id="sign-in-remember">
+                        <span class="checkmark"></span>
+                      </label>
+                      <div style="cursor: pointer;" onclick="openForgotPassword()">
+                        <i class="fas fa-question-circle"></i> Quên mật khẩu</div>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                      <button type="button" class="btn btn-green btn-login-modal" id="btn-sign-in">Đăng nhập</button>
+                    </div>
+                    <!-- <div class="text-center" style="margin-bottom: 1rem;">
+                      Hoặc đăng nhập bằng
+                    </div>
+                    <div class="text-center">
+                      <div class="fab google-sign-in">
+                        <img src="/resources/image/google.png">
+                      </div>
+                      <div class="fab facebook-sign-in">
+                        <img src="/resources/image/facebook.png">
+                      </div>
+                      <div class="fab github-sign-in">
+                        <img src="/resources/image/github-sign.svg">
+                      </div>
+                    </div> -->
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="sign-up-div" role="tabpanel">
+                  <form>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Họ tên" id="sign-up-fullname" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Email" id="sign-up-email" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Mật khẩu" id="sign-up-password" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Nhập lại mật khẩu" id="sign-up-retype-password" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <button type="button" class="btn btn-green btn-login-modal" id="btn-sign-up">Đăng ký</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="menu">
+      <div class="logoSmall text-center" style='margin-bottom: -70px ;display: none'>
+        <h1>
+          <span>
+            <span class='logo1 '> G</span>
+            <span class='logo2'> R</span>
+            <span class='logo3 '> <i class="far fa-thumbs-up text-secondary"></i></span>
+            <span class='logo4'> A</span>
+            <span class='logo5'> T</span>
+          </span>
+        </h1>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white pt-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+          <ul class="navbar-nav left   justify-content-around">
+            <li class="nav-item active">
+              <a class="nav-link " href="./index.html">Trang Chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link  " href="./sanpham.html"> Sản Phẩm <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link " href="./duan.html">Dự Án <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <div class="logo text-center  ">
+            <h1>
+              <span>
+                <span class='logo1 '> G</span>
+                <span class='logo2'> R</span>
+                <span class='logo3 '> <i class="far fa-thumbs-up text-secondary"></i></span>
+                <span class='logo4'> A</span>
+                <span class='logo5'> T</span>
+              </span>
+            </h1>
+          </div>
+          <ul class="navbar-nav rigth justify-content-around ">
+            <li class="nav-item active">
+              <a class="nav-link " href="#" id='chungtoi'>Chúng Tôi <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link  " href="./phongthuy.html"> Phong Thủy <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link  " href="./lienhe.html">Liên Hệ <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class='bannerAbout'>
+    </div>
+  </header>
+  <div class="containerAbout">
+
+    <!-- // Giới thiệu -->
+    <section class=' text-center'>
+      <div class='titleAbout'>
+        <h2>
+          GIỚI THIỆU VỀ <span class=''>GREAT</span>
+        </h2>
+      </div>
+      <div class='contentAbout'>
+        <i>
+          <b>GREAT</b> là đơn vị hoạt động chuyên nghiệp trong lĩnh vực tư vấn, thiết kế kiến trúc, xây dựng và trang
+          trí
+          nội thất.
+          Với đội ngũ kiến trúc sư giàu kinh nghiệm, chúng tôi đem lại những công trình chất lượng cao, thể hiện giá trị
+          và
+          tầm nhìn thời đại. </i> </br>
+        <p></p>
+        <i>
+          Trong công việc, chúng tôi luôn cùng chú tâm nghiên cứu tìm ra những giải pháp công
+          năng hợp lý, đáp ứng tối đa nhu cầu của người sử dụng, song song đi kèm là một hệ thống tiêu chuẩn được áp
+          dụng
+          chặt
+          chẽ xuyên suốt quá trình làm việc nhằm hoàn thành mọi dự án đúng tiến độ và đúng ý khách hàng..
+        </i>
+      </div>
+
+
+    </section>
+    <div class='titleAbout text-center'>
+      <h2>
+        BAN LÃNH ĐẠO CÔNG TY
+      </h2>
+    </div>
+    <DIV class="row container m-auto About text-center">
+      <div class="col-lg-3 col-md-6 aboutItem">
+        <img src='./Image/duan/1.png' class='img-fluid'>
+        <p class = 'm-0'>  <b> Đào Ngọc Vinh</b></p>
+        <p >  Thạc Sỹ- ủy viên </p>
+      </div>
+      <div class="col-lg-3 col-md-6 aboutItem">
+        <img src='./Image/duan/2.png' class='img-fluid'>
+        <p class = 'm-0'>  <b> Đỗ Minh Dũng</b></p>
+        <p >  Thạc Sỹ- ủy viên </p>
+      </div>
+      <div class="col-lg-3 col-md-6 aboutItem">
+        <img src='./Image/duan/3.png' class='img-fluid'>
+        <p class = 'm-0'>  <b> Phạm Hữu Sơn</b></p>
+        <p >  Thạc Sỹ- Phó Chủ Tịch </p>
+      </div>
+      <div class="col-lg-3 col-md-6 aboutItem">
+        <img src='./Image/duan/4.png' class='img-fluid'>
+        <p class = 'm-0'>  <b> Hitoshi Yahagi</b></p>
+        <p >  Chủ Tịch HĐQT </p>
+      </div>
+    </DIV>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <div class="row">
+      <div class="cart-container col-lg-12">
+      </div>
+      <div class="col-md-12 pl-0 ">
+        <div class="cart-coupon">
+          <section class='policy'>
+            <div class="d-flex m-0">
+              <div class="col-md-4  text-center item">
+                <a href="#khuyenmai" id='khuyenmai1'> <i class="fas fa-gift"></i></a>
+                <h5> KHUYẾN MÃI</h5>
+                <P>
+                  Giảm giá ngay 20% cho khách hàng sử dụng dịch vụ của GREAT lần thứ 2 trở lên.
+                </P>
+              </div>
+              <div class="col-md-4 text-center item">
+                <i class="far fa-bookmark"></i>
+                <h5> UY TÍN & CHUYÊN NGHIỆP</h5>
+                <P>
+                  Quy trình làm việc chuyên nghiệp và sáng tạo, GREAT mang đến sự tin tưởng tuyệt đối cho tất cả khách
+                  hàng..
+                </P>
+              </div>
+              <div class="col-md-4 text-center item">
+                <i class="fas fa-city"></i>
+                <h5> THIẾT KẾ CHẤT LƯỢNG</h5>
+                <P> Mang đến cho khách hàng những sản phẩm thiết kế nội thất độc đáo, sáng tạo và thời thượng nhất.
+                </P>
+              </div>
+            </div>
+          </section>
+          <button class="btn-info  apply-coupon link-to">Áp dụng mã giảm giá</button>
+        </div>
+      </div>
+    </div> -->
+  </div>
+
+  <footer>
+    <div class="">
+      <div class="row footer-top m-0">
+        <div class=" col-lg-3 col-md-6 footer-item">
+          <h4>Chủ Sở Hữu WS</h4>
+          <ul>
+            <li>Công Ty CP GREAT Việt Nam</li>
+            <li>Mã số thuế: 0105341857</li>
+            <li>Ngày cấp giấy phép: 02/06/2011</li>
+            <li>Đại diện pháp luật: Mai Văn Bảy</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item">
+          <h4>Thời gian làm việc</h4>
+          <ul>
+            <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
+            <li>Thứ 7: 9AM - 8PM</li>
+            <li>Nghỉ Chủ Nhật và các ngày Lễ Tết</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul>
+            <li><a href="contact.html">Liên hệ & Góp ý</a></li>
+            <li><a href="#">Hướng dẫn mua hàng online</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <!-- <li><a href="#">Chính sách bảo mật</a></li> -->
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item pr-0">
+          <h4>Địa CHỉ</h4>
+          <ul>
+            <li><a href="#">HH01-Thanh Hà-HN</a></li>
+            <li><a href="#">Duylinh87.wru@gmail.com</a></li>
+            <li><a href="#">SĐT:0968636309</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bot d-flex justify-content-center">
+        <div class="facbook iconItem">
+          <a href='#'> <i class="fab fa-facebook-f"></i> </a>
+        </div>
+        <div class="youtube iconItem">
+          <a href='#'> <i class="fab fa-youtube-square"></i></a>
+        </div>
+        <div class="instagram iconItem">
+          <a href='#'> <i class="fab fa-instagram"></i> </a>
+        </div>
+      </div>
+    </div>
+    <div class=" copyright">
+      <p>Copyright 2019 <i class="fa fa-copyright"></i> DuyLinh</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="./puclic/slick-1.8.1/slick/slick.min.js"></script>
+  <script src='./js/sanpham.js'>
+  </script>
+
+
+
+</body>
+
+</html>

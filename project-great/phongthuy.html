@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Phong Thủy</title>
+  <!-- <link rel="icon" href="img/fa-icon/favicon.ico"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css/all.css">
+  <link rel="stylesheet" href="./style.css/sanpham.css">
+  <!-- <link rel="shortcut icon" type="image/png" href="./Image/logo.png"> -->
+</head>
+
+<body>
+  <header>
+    <div class="info">
+      <span class='address'>
+        <i class="fas fa-map-marker-alt"></i>
+        164VươngThừaVũ-HàNội 
+      </span>
+      <span class='phone ml-4'>
+        <i class="fas fa-phone-volume"></i>
+        0968636309
+      </span>
+      <!-- <span class='gmail ml-4'>
+        <i class="fas fa-envelope-square"></i>
+        Duylinh87.wru@gmail.com
+      </span> -->
+      <span class='login '>
+          <b class=" user-top-menu" data-toggle="modal" data-target="#modal-signin" style= "cursor: pointer"> Đăng ký | Đăng Nhập</b> 
+        <div class="modal fade" id="modal-signin" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" style="flex: 1">
+                  <a class="nav-link active" id="sign-in-tab" data-toggle="tab" href="#sign-in-div" role="tab"
+                    aria-selected="true">Đăng nhập</a>
+                </li>
+                <li class="nav-item" style="flex: 1">
+                  <a class="nav-link" id="sign-up-tab" data-toggle="tab" href="#sign-up-div" role="tab"
+                    aria-selected="false">Đăng ký</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade active show" id="sign-in-div" role="tabpanel">
+                  <form>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Email" id="sign-in-email" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Password" id="sign-in-password" required="">
+                    </div>
+                    <div class="modal-login-item-half">
+                      <label style="display:none" class="checkbox-remember-me">Nhớ tài khoản
+                        <input type="checkbox" id="sign-in-remember">
+                        <span class="checkmark"></span>
+                      </label>
+                      <div style="cursor: pointer;" onclick="openForgotPassword()">
+                        <i class="fas fa-question-circle"></i> Quên mật khẩu</div>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                      <button type="button" class="btn btn-green btn-login-modal" id="btn-sign-in">Đăng nhập</button>
+                    </div>
+
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="sign-up-div" role="tabpanel">
+                  <form>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Họ tên" id="sign-up-fullname" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Email" id="sign-up-email" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Mật khẩu" id="sign-up-password" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Nhập lại mật khẩu" id="sign-up-retype-password" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <button type="button" class="btn btn-green btn-login-modal" id="btn-sign-up">Đăng ký</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="menu">
+      <div class="logoSmall text-center" style='margin-bottom: -70px ;display: none'>
+        <h1>
+          <span>
+            <span class='logo1 '> G</span>
+            <span class='logo2'> R</span>
+            <span class='logo3 '> <i class="far fa-thumbs-up text-secondary"></i></span>
+            <span class='logo4'> A</span>
+            <span class='logo5'> T</span>
+          </span>
+        </h1>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-white pt-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+          <ul class="navbar-nav left   justify-content-around">
+            <li class="nav-item active">
+              <a class="nav-link " href="./index.html">Trang Chủ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link  " href="./sanpham.html"> Sản Phẩm <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link " href="./duan.html">Dự Án <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <div class="logo text-center  ">
+            <h1>
+              <span>
+                <span class='logo1 '> G</span>
+                <span class='logo2'> R</span>
+                <span class='logo3 '> <i class="far fa-thumbs-up text-secondary"></i></span>
+                <span class='logo4'> A</span>
+                <span class='logo5'> T</span>
+              </span>
+            </h1>
+          </div>
+          <ul class="navbar-nav rigth justify-content-around ">
+            <li class="nav-item active">
+              <a class="nav-link " href="./chungtoi.html">Chúng Tôi <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link  " href="#" id ='phongthuy'> Phong Thủy <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link  " href="./lienhe.html">Liên Hệ <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class='bannerphongthuy'>
+    </div>
+  </header>
+  <section class='product'>
+    <div class='title text-center'>
+      <H3 class='p-3'> PHONG THỦY</H3>
+    </div>
+    <div class="content row m-0">
+      <div class="col-lg-8 left2">
+        <h3>Cách tính tuổi làm nhà theo phong thủy tiền vào như nước</h3>
+        <p>10 tháng 09, 2019</p>
+        <hr>
+        <p>Theo quan niệm cách tính tuổi làm nhà theo phong thủy của ông bà ta: " lấy vợ xem tuổi đàn bà, xây nhà xem
+          tuổi đàn ông" bởi vì thông thường người nam là trụ cột trong gia đình, xây nhà là dương trạch cần chọn một
+          người nam thuộc dương để thuận lý âm dương rất tốt. Lư ý, đối với những gia đình không có đàn ông, hay muốn
+          xây nhà trong năm nay mà người nam không hợp tuổi thì mới xem tuổi người nữ để đóng vai trò chủ chốt cho sư
+          phát tiển và tồn tại của căn nhà đó. </p>
+        <h6> <b>Vậy cách tính tuổi làm nhà như thế nào là hợp vận mệnh?</b></h6>
+        <div class='text-center'>
+        <img src='./Image/phongthuy/tinhtuoi1.jpg' class='img-fluid'>
+      </div>
+        <h6> <b>Cách tính tuổi làm nhà hợp vận mệnh chi tiết nhất?</b></h6>
+        <p>Hôm nay Kiến Trúc GREAT sẽ chia sẻ cho quý khách hàng cách tính tuổi làm nhà theo phong thủy chính xác và
+          phù hợp với vận mệnh của từng người. Chúng ta phải xét đủ 3 yếu tố</p>
+        <h6> <b>1. Cách tính kim lâu</b></h6>
+        <div class='text-center'>
+          <img src='./Image/phongthuy/tinhtuoi2.jpg' class='img-fluid'>
+          <p class='pt-2'> Cách tính tuổi Kim Lâu
+          </p>
+          <h6> <b>Công thức tính: Kim Lâu = [(Năm Xây nhà - Năm Sinh Gia chủ Đứng ra cất) +1]: 9</b></h6>
+        </div>
+        <p> Có nghĩa là các bạn lấy năm dự định xây nhà trừ cho năm sinh của người đứng ra làm nhà cộng thêm cho 1 rồi
+          tất cả kết quả đó đem chia cho 9. Nếu Chia mà số dư ra 1, 3, 6, 8 Thì đã phạm vào Kim Lâu.</p>
+        <p>
+          VD: Nam Sinh 1980, Dự định vào năm 2018 làm nhà: <br>
+          Cách tính:[( 2018 - 1980) + 1] : 9 = 39 : 9 = 4,33333 ==> Số dư là 3 Phạm vào Kim Lâu Thê
+        </p>
+        <h6> <b>2. Cách tính hoang ốc</b></h6>
+        <div class='text-center'>
+          <img src='./Image/phongthuy/tinhtuoi3.jpg' class='img-fluid'>
+        </div>
+        <p>
+          Theo tài liệu cách tính tuổi làm nhà và kinh nghiệm ông bà ta để lại: Nhất Cát được tính bắt đầu lúc 10 tuổi,
+          20 Nhì Nghi, 30 Tam Địa Sát, 40 Tứ Tấn Tài, 50 ngũ thọ từ, 60 lục hoang ốc. Nếu 70 thì quay lại từ đầu Nhất
+          Cát( Kiết).
+        </p>
+        <h6> <b>3. Cách tính tam tai</b></h6>
+        <p> Tam tai là phạm 3 năm liên tục không tốt được tính như sau. Trong 3 năm này chúng ta luôn gặp những điều không may mắn, xui xẻo, nặng có thể dẫn đến tù tội....</p>
+        <img src='./Image/phongthuy/tinhtuoi4.jpg' class='img-fluid'>
+        <h6> <b>Kết luận</b></h6>
+        <p> Từ các diễn giải trên ta có thể thấy việc xây, làm nhà<b> tránh</b>  được các năm tam tai, kim lâu và hoang ốc thì sẽ tốt cho gia chủ.
+        </p>
+      </div>
+      <div class="col-lg-4 right">
+        <h4 style = 'color: brown'> CÁC BÀI VIẾT LIÊN QUAN</h4>
+        <HR >
+        <div class="card mb-3 m-auto " style="max-width: 390px;">
+          <div class="row no-gutters">
+            <div class="col-md-6 p-2">
+              <a href=" #"> <img src="./Image/phongthuy/pht1.png" class="card-img" alt="..."></a>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body p-2">
+                <a href=" #">
+                  <h5 class="card-title" style='font-size: 14px; height: 70px; font-weight: 700'>Xem cách bài trí bàn
+                    thờ gia tiên để cho đúng (phần 1)</h5>
+
+                </a>
+              
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="card mb-3 m-auto " style="max-width: 390px;">
+          <div class="row no-gutters">
+            <div class="col-md-6 p-2">
+              <a href=" #"> <img src="./Image/phongthuy/pht2.png" class="card-img" alt="..."></a>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body p-2">
+                <a href=" #">
+                  <h5 class="card-title" style='font-size: 14px; height: 70px ; font-weight: 700'>khi đặt giường ngủ hãy
+                    nhớ
+                    nguyên tắc này để không bị ảnh hưởng...</h5>
+                </a>
+                <p class="card-text"><small class="text-muted">Last updated 6 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+        <div class="card mb-3 m-auto " style="max-width: 390px;">
+          <div class="row no-gutters">
+            <div class="col-md-6 p-2">
+              <a href=" #"> <img src="./Image/phongthuy/pht3.png" class="card-img" alt="..."></a>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body p-2">
+                <a href=" #">
+                  <h5 class="card-title" style='font-size: 14px; height: 70px ; font-weight: 700'>Những lưu ý khi làm hồ bơi trong nhà , chúng ta ít làm ...</h5>
+                </a>
+                <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+        <div class="card mb-3 m-auto " style="max-width: 390px;">
+          <div class="row no-gutters">
+            <div class="col-md-6 p-2">
+              <a href=" #"> <img src="./Image/phongthuy/pht4.png" class="card-img" alt="..."></a>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body p-2">
+                <a href=" #">
+                  <h5 class="card-title" style='font-size: 14px; height: 70px ; font-weight: 700'>16 điều cấm kỵ khi làm cổng nhà để tránh tai họa..</h5>
+                </a>
+                <p class="card-text"><small class="text-muted">Last updated 20 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+        <div class="card mb-3 m-auto " style="max-width: 390px;">
+          <div class="row no-gutters">
+            <div class="col-md-6 p-2">
+              <a href=" #"> <img src="./Image/phongthuy/pht5.png" class="card-img" alt="..."></a>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body p-2">
+                <a href=" #">
+                  <h5 class="card-title" style='font-size: 14px; height: 70px ; font-weight: 700'>Cách hóa giải phong thủy cho nhà bị cây to chiếu vào...</h5>
+                </a>
+                <p class="card-text"><small class="text-muted">Last updated 30 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+        <div class="card mb-3 m-auto " style="max-width: 390px;">
+          <div class="row no-gutters">
+            <div class="col-md-6 p-2">
+              <a href=" #"> <img src="./Image/phongthuy/pth6.png" class="card-img" alt="..."></a>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body p-2">
+                <a href=" #">
+                  <h5 class="card-title" style='font-size: 14px; height: 70px ; font-weight: 700'>Bố trí phong thủy phòng tắm để không bị tán tài...</h5>
+                </a>
+                <p class="card-text"><small class="text-muted">Last updated 45 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+        <div class="card mb-3 m-auto " style="max-width: 390px;">
+          <div class="row no-gutters">
+            <div class="col-md-6 p-2">
+              <a href=" #"> <img src="./Image/phongthuy/pth7.png" class="card-img" alt="..."></a>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body p-2">
+                <a href=" #">
+                  <h5 class="card-title" style='font-size: 14px; height: 70px ; font-weight: 700'>5 dấu hiệu cho thấy ngôi nhà bạn hợp phong thủy...</h5>
+                </a>
+                <p class="card-text"><small class="text-muted">Last updated 47 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="card mb-3 m-auto " style="max-width: 390px;">
+          <div class="row no-gutters">
+            <div class="col-md-6 p-2">
+              <a href=" #"> <img src="./Image/phongthuy/pht8.png" class="card-img" alt="..."></a>
+            </div>
+            <div class="col-md-6">
+              <div class="card-body p-2">
+                <a href=" #">
+                  <h5 class="card-title" style='font-size: 14px; height: 70px; font-weight: 700'>Phong thủy phòng ngủ những điều lưu ý...</h5>
+                </a>
+                <p class="card-text"><small class="text-muted">Last updated 56 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="">
+      <div class="row footer-top m-0">
+        <div class=" col-lg-3 col-md-6 footer-item">
+          <h4>Chủ Sở Hữu WS</h4>
+          <ul>
+            <li>Công Ty CP GREAT Việt Nam</li>
+            <li>Mã số thuế: 0105341857</li>
+            <li>Ngày cấp giấy phép: 02/06/2011</li>
+            <li>Đại diện pháp luật: Mai Văn Bảy</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item">
+          <h4>Thời gian làm việc</h4>
+          <ul>
+            <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
+            <li>Thứ 7: 9AM - 8PM</li>
+            <li>Nghỉ Chủ Nhật và các ngày Lễ Tết</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul>
+            <li><a href="contact.html">Liên hệ & Góp ý</a></li>
+            <li><a href="#">Hướng dẫn mua hàng online</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <!-- <li><a href="#">Chính sách bảo mật</a></li> -->
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item pr-0">
+          <h4>Địa CHỉ</h4>
+          <ul>
+            <li><a href="#">HH01-Thanh Hà-HN</a></li>
+            <li><a href="#">Duylinh87.wru@gmail.com</a></li>
+            <li><a href="#">SĐT:0968636309</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bot d-flex justify-content-center">
+        <div class="facbook iconItem">
+          <a href='#'> <i class="fab fa-facebook-f"></i> </a>
+        </div>
+        <div class="youtube iconItem">
+          <a href='#'> <i class="fab fa-youtube-square"></i></a>
+        </div>
+        <div class="instagram iconItem">
+          <a href='#'> <i class="fab fa-instagram"></i> </a>
+        </div>
+      </div>
+    </div>
+    <div class=" copyright">
+      <p>Copyright 2019 <i class="fa fa-copyright"></i> DuyLinh</p>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src='./js/sanpham.js'>
+  </script>
+
+
+</body>
+
+</html>

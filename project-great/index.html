@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Kiến Trúc Great</title>
+  <!-- <link rel="icon" href="img/fa-icon/favicon.ico"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css/all.css">
+  <link rel="stylesheet" href="./style.css/home.css">
+  <link rel="stylesheet" href="./puclic/animate.css">
+  <link rel="shortcut icon" type="image/png" href="./Image/logo.png">
+</head>
+
+<body>
+
+  <header>
+    <div class="info">
+      <span class='address'>
+     <a href="./lienhe.html" style ='color: white'>  <i class="fas fa-map-marker-alt"></i>  164VươngThừaVũ-HàNội   </a>   
+      
+      </span>
+      <span class='phone ml-4'>
+        <i class="fas fa-phone-volume"></i>
+        0968636309
+      </span>
+      <!-- <span class='gmail ml-4'>
+        <i class="fas fa-envelope-square"></i>
+        Duylinh87.wru@gmail.com
+      </span> -->
+      <span class='login '>
+        <b class=" user-top-menu" data-toggle="modal" data-target="#modal-signin" style= "cursor: pointer"> Đăng ký | Đăng Nhập</b> 
+        <div class="modal fade" id="modal-signin" tabindex="-1" role="dialog" style="display: none;" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item" style="flex: 1">
+                  <a class="nav-link active" id="sign-in-tab" data-toggle="tab" href="#sign-in-div" role="tab"
+                    aria-selected="true">Đăng nhập</a>
+                </li>
+                <li class="nav-item" style="flex: 1">
+                  <a class="nav-link" id="sign-up-tab" data-toggle="tab" href="#sign-up-div" role="tab"
+                    aria-selected="false">Đăng ký</a>
+                </li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane fade active show" id="sign-in-div" role="tabpanel">
+                  <form>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Email" id="sign-in-email" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Password" id="sign-in-password" required="">
+                    </div>
+                    <div class="modal-login-item-half">
+                      <label style="display:none" class="checkbox-remember-me">Nhớ tài khoản
+                        <input type="checkbox" id="sign-in-remember">
+                        <span class="checkmark"></span>
+                      </label>
+                      <div style="cursor: pointer;" onclick="openForgotPassword()">
+                        <i class="fas fa-question-circle"></i> Quên mật khẩu</div>
+                    </div>
+                    <div style="margin-bottom: 2rem;">
+                      <button type="button" class="btn btn-green btn-login-modal" id="btn-sign-in">Đăng nhập</button>
+                    </div>
+                    <!-- <div class="text-center" style="margin-bottom: 1rem;">
+                      Hoặc đăng nhập bằng
+                    </div>
+                    <div class="text-center">
+                      <div class="fab google-sign-in">
+                        <img src="/resources/image/google.png">
+                      </div>
+                      <div class="fab facebook-sign-in">
+                        <img src="/resources/image/facebook.png">
+                      </div>
+                      <div class="fab github-sign-in">
+                        <img src="/resources/image/github-sign.svg">
+                      </div>
+                    </div> -->
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="sign-up-div" role="tabpanel">
+                  <form>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Họ tên" id="sign-up-fullname" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="text" placeholder="Email" id="sign-up-email" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Mật khẩu" id="sign-up-password" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <input type="password" placeholder="Nhập lại mật khẩu" id="sign-up-retype-password" required="">
+                    </div>
+                    <div class="modal-login-item">
+                      <button type="button" class="btn btn-green btn-login-modal" id="btn-sign-up">Đăng ký</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+    <div class="menu">
+      <div class="logoSmall text-center " style='margin-bottom: -70px ; display: none'>
+        <h1>
+          <span>
+            <span class='logo1 '> G</span>
+            <span class='logo2'> R</span>
+            <span class='logo3 '> <i class="far fa-thumbs-up text-secondary"></i></span>
+            <span class='logo4'> A</span>
+            <span class='logo5'> T</span>
+          </span>
+        </h1>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-light pt-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+          <ul class="navbar-nav left   justify-content-around">
+            <li class="nav-item active">
+              <a class="nav-link " href="">TRANG CHỦ <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link  " href="./sanpham.html"> SẢN PHẨM <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link " href="./duan.html  ">DỰ ÁN <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+          <div class="logo text-center bounceInDown animated ">
+            <h1>
+              <span class =''>
+                <span class='logo1 '> G</span>
+                <span class='logo2'> R</span>
+                <span class='logo3 '> <i class="far fa-thumbs-up text-secondary"></i></span>
+                <span class='logo4'> A</span>
+                <span class='logo5'> T</span>
+              </span>
+            </h1>
+          </div>
+          <ul class="navbar-nav rigth justify-content-around ">
+            <li class="nav-item active">
+              <a class="nav-link " href="./chungtoi.html">CHÚNG TÔI <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link  " href="./phongthuy.html"> PHONG THỦY <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active ">
+              <a class="nav-link  " href="./lienhe.html">LIÊN HỆ <span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class='banner'>
+      <!-- <div class="bannerTitle text-center">
+        <h1> well come to great</h1>
+        <h5> thiết kế - thi công -xây dựng</h5>
+        <a href="#info"> <button type="button" class="btn btn-info">
+            <i class="fas fa-anchor"></i></button>
+        </a> -->
+    </div>
+    <!-- <div class = 'divtitle'>
+      
+        </div> -->
+  </header>
+
+  <!-- // Giới thiệu -->
+  <section class=' about text-center'>
+
+    <div class='title bounceInRight animated '>
+      <h3>
+        NẾU BẠN ĐANG MUỐN THIẾT KẾ -THI CÔNG KIẾN TRÚC <br>
+        VÀ NỘT THẤT CHO
+      </h3>
+    </div>
+    <div class=" text-center">
+      <div class="row ">
+        <div class="col-lg-4 ">
+          <img src='./Image/Home/BIETHU.png' class='img-fluid'>
+        </P> BIỆT THỰ</p>
+        </div>
+        <div class="col-lg-4">
+          <img src='./Image/Home/CHUNGCU.png' class='img-fluid'>
+        </p> CHUNG CƯ CAO CẤP </p>
+        </div>
+        <div class="col-lg-4">
+          <img src='./Image/Home/NHAPHO.png' class='img-fluid'>
+          </p> NHÀ PHỐ </p>
+        </div>
+      </div>
+    </div>
+    <div class='aboutLink'>
+      <button type="button" class="btn btn-info" id='info'>
+        GỌI NGAY 0968.636.309</button>
+    </div>
+  </section>
+  <!-- // sản phẩm mới -->
+  <section class='newProduce container-fluid p-0'>
+    <div class='title text-center'>
+      <h2> SẢN PHẨM NỘI THẤT MỚI</h2>
+      <p> <i> <b>Những Sản Phẩm Mới Nhất tháng 7/2019</b></i></p>
+    </div>
+    <div class="row ">
+      <div class=' item1 col-lg-3 col-md-6 '>
+        	<div class="banner-content">
+              <h3>Gương dây da</h3>
+              <a href="./chitiet.html">Xem chi tiết <i class="fa fa-long-arrow-right"></i></a> 
+            </div>
+        <img src='./Image/Home/1.jpg' class='img-fluid' alt="...">
+      </div>
+      <div class=' item2 col-lg-3 col-md-6'>
+        <img src='./Image/Home/2.jpg' class='img-fluid' alt="...">
+      </div>
+      <div class=' item3 col-lg-3 col-md-6'>
+        <img src='./Image/Home/5.jpg' class='img-fluid'alt="...">
+      </div>
+      <div class=' item4 col-lg-6 col-md-12'>
+          <div class="banner-content">
+              <h3>Đèn trang trí</h3>
+              <a href="shop-detail.html">Xem chi tiết <i class="fa fa-long-arrow-right"></i></a> 
+            </div>
+        <img src='./Image/Home/4.jpg' class='img-fluid'alt="...">
+      </div>
+      <div class=' item5 col-lg-6 col-md-12'>
+          <div class="banner-content">
+              <h3>Bàn nước</h3>
+              <a href="shop-detail.html">Xem chi tiết <i class="fa fa-long-arrow-right"></i></a> 
+            </div>
+        <img src='./Image/Home/3.jpg' class='img-fluid'alt="...">
+      </div>
+    </div>
+  </section>
+  <section class='slogan'>
+      <div class="slogan-content text-center">
+          <h3>HÃY ĐẾN VỚI CHÚNG TÔI</h3>
+          <h3>VẺ ĐẸP SẼ ĐẾN VỚI NGÔI NHÀ CỦA BẠN</h3>
+        </div>
+  </section>
+  <!-- // sản phẩm ban chay nhat 2019 -->
+  <section class='topProduce '>
+    <div class='title text-center'>
+      <h2> SẢN PHẨM TOP</h2>
+      <p> <i> <b>Những Sản Phẩm Bán Chạy nhất 2019</b></i></p>
+    </div>
+    <nav>
+      <div class="nav nav-tabs mb-5 justify-content-center" id="nav-tab" role="tablist">
+        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+          aria-controls="nav-home" aria-selected="true">GHẾ</a>
+        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+          aria-controls="nav-profile" aria-selected="false">TỦ BẾP</a>
+        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+          aria-controls="nav-contact" aria-selected="false">TRANH</a>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <div class="row m-auto ">
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <a href="./chitiet.html"> <img src="./Image/Home/Rectangle 6 (2).png" alt="ghế nhà hàng"
+                    class="img-thumbnail"> </a>
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế văn phòng MS01
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>11.200.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (4).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế bàn ăn MS01
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>300.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (8).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế Văn phòng MS02
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>700.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6.png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế sân vườn MS01
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>400.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (6).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế nhà hàng MS01
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body pl-3 pr-3">
+
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>1.200.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (10).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế bàn ăn MS02
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>200.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (12).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế nhà hàng MS02
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body pl-3 pr-3">
+
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>1.100.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (14).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Ghế nhà hàng MS03
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body pl-3 pr-3">
+
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>900.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+        <div class="row m-auto ">
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <a href="#"> <img src="./Image/Home/Rectangle 6 (1).png" alt="ghế nhà hàng" class="img-thumbnail"> </a>
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tủ bếp loại 3 MS03
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>34.000.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (7).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tủ bếp loại 2 MS02
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>54.000.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (5).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tủ bếp loại 4 MS04
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>43.000.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (13).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tủ bếp loại 1 MS1
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>400.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <div class="row m-auto ">
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <a href="#"> <img src="./Image/Home/Rectangle 6 (3).png" alt="ghế nhà hàng" class="img-thumbnail"> </a>
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tranh bộ MS01
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>700.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (9).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tranh bộ MS02
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>1.200.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=' col-lg-3 col-md-6 m-auto pb-5'>
+            <div class="card m-auto">
+              <div class='imgFather'>
+                <img src="./Image/Home/Rectangle 6 (11).png" class="img-thumbnail" alt="...">
+              </div>
+              <div class="card-body p-3">
+                <h5 class="card-title mt-2">
+                  Tranh bộ MS03
+                </h5>
+              </div>
+              <div class="d-flex justify-content-between pt-1">
+              </div>
+
+              <div class="card-body p-3">
+                <div class="d-flex justify-content-between">
+                  <div>
+                    <SPAN>1.000.000 Đ</SPAN>
+                  </div>
+                  <div>
+                    <a href="#"><button type="button" class="btn  sale ">Mua Ngay</button></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class='aboutLink text-center pb-5'>
+      <button type="button" class="btn btn-info" id='info'>
+        XEM THÊM</button>
+    </div>
+  </section>
+  <!-- // quy trinh cong ty -->
+  <section class='procedure text-center'>
+    <div class='title'>
+      <h3>
+        03 BƯỚC CHUYÊN NGHIỆP TRONG QUY TRÌNH <br>
+        CỦA CHÚNG TÔI
+      </h3>
+    </div>
+    <div class=" text-center container">
+      <div class="row ">
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card m-auto" style="width: 18rem; height: 360px;">
+            <img src="./Image/Home/Rectangle 18.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bước 1: Gặp gỡ & Tư Vấn</h5>
+              <p class="card-text " style="text-align: justify">Trực tiếp gặp gỡ và trao đổi về ý tưởng, tư vấn về vật
+                liệu,
+                giá thành để định hướng phong cách thiết kế </p>
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card m-auto" style="width: 18rem; height: 360px;">
+            <img src="./Image/Home/Rectangle 18 (1).png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bước 2: Thiết kế Mua Ngay</h5>
+              <p class="card-text " style="text-align: justify">Sau khi thống nhất ý tưởng phong cách và vật liệu, sẽ
+                lên thiết kế Mua Ngay cho công trình của bạn , bao gồm các bản vẽ thiết kế bối cảnh </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4 mb-4">
+          <div class="card m-auto" style="width: 18rem; height: 360px;">
+            <img src="./Image/Home/Rectangle 18 (2).png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Bước 3: Giám sát</h5>
+              <p class="card-text " style="text-align: justify">Chúng tôi sẽ khảo sát lại hiện trạng lại 1 lần nữa để
+                đảm bảo hạn chế sai sót trong quá trình thi công. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //duan -->
+  <section class='projectTop '>
+    <div class='title text-center'>
+      <h2> DỰ ÁN ĐIỂN HÌNH</h2>
+    </div>
+    <div class="row"> 
+      <div class="col-lg-6">
+        <img src="./Image/Home/duan1 (1).png" class="card-img-top" alt="...">
+      </div>
+      <div class="col-lg-6 p-5">
+        <H6 ><b> NHÀ ANH TÙNG NÚI - THÁI BÌNH   </b> </H6>
+        <P> + Căn hộ chung cư 90m2 gồm 3 phòng ngủ , 3 phòng vệ sinh</P>
+        <P> + Đơn vị thiết kế thi công : công ty cổ phần Great Việt Nam</P>
+        <P> + Chi phí công trình : 600 triệu thi công trong 2 tháng</P>
+
+      </div>
+    </div>
+    <div class="row ">
+      <div class="col-lg-4 mt-5">
+        <img src="./Image/Home/duan1 (2).png" class="card-img-top" alt="...">
+      </div>
+      <div class="col-lg-4 mt-5 ">
+        <img src="./Image/Home/duan1 (3).png" class="card-img-top" alt="...">
+      </div>
+      <div class="col-lg-4 mt-5">
+        <img src="./Image/Home/duan1 (4).png" class="card-img-top" alt="...">
+      </div>
+      <div class="col-lg-4 mt-5">
+        <img src="./Image/Home/duan1 (5).png" class="card-img-top" alt="...">
+      </div>
+      <div class="col-lg-4 mt-5">
+        <img src="./Image/Home/duan1 (6).png" class="card-img-top" alt="...">
+      </div>
+      <div class="col-lg-4 mt-5">
+        <img src="./Image/Home/duan1 (7).png" class="card-img-top" alt="...">
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- //gioithieucacduan -->
+  <section class='project container'>
+    <div class='title text-center'>
+      <h2> DỰ ÁN KHÁC</h2>
+      <P><I><B>Văn Phòng - Nhà Dân - Tôn Giáo - Chung Cư- Công Cộng</B></I> </P>
+    </div>
+    <div class="panels img-thumbnail">
+      <div class="panel panel1 img-thumbnail">
+        <!-- <p>Văn Phòng - Hà Nội</p> -->
+        <p> <button type="button" class="btn"
+            style='box-shadow: 1px 0px 2px 2px #333333;font-size: 20px ;color: #333333'>
+            Văn Phòng</button></p>
+        <p></p>
+      </div>
+      <div class="panel panel2 img-thumbnail">
+        <!-- <p>Nhà a Huy -Hà Nội</p> -->
+        <p> <button type="button" class="btn" style='box-shadow: 1px 0px 2px 2px white;font-size: 20px ;color:white'>
+            Nhà Dân</button></p>
+        <p></p>
+      </div>
+      <!-- <div class="panel panel3 img-thumbnail">
+        <p>Quy Hoạch nhà thờ Xuân Tiến -Nam Định</p>
+        <p> <button type="button" class="btn" style='box-shadow: 1px 0px 1px 1px white;font-size: 20px ;color:white'>
+            Tôn Giáo</button></p>
+        <p></p>
+      </div> -->
+      <div class="panel panel4 img-thumbnail">
+        <!-- <p>Cô Giáo Thảo - Bắc Ninh</p> -->
+        <p> <button type="button" class="btn" style='box-shadow: 1px 0px 2px 2px white;font-size: 20px ;color:#333333'>
+            Chung Cư</button></p>
+        <p></p>
+      </div>
+      <div class="panel panel5">
+        <!-- <p>Trường Mầm Non - Sàn Gòn</p> -->
+        <p> <button type="button" class="btn"
+            style='box-shadow: 1px 0px 2px 2px #333333;font-size: 20px ;color: #333333'>
+            Công Cộng</button></p>
+        <p></p>
+      </div>
+    </div>
+    <div class='text-center m-auto '>
+      <button type="button" class="btn btn-info">
+        XEM THÊM</button>
+    </div>
+  </section>
+  <!-- //khuyenmai -->
+  <section id='khuyenmai'>
+
+    <div class=" rigth">
+      <h2>ƯU ĐÃI ĐẶC BIỆT</h2>
+      <p>MIỄN PHÍ thiết kế đối với hợp đồng giá trị từ 200.000.000đ trở lên (Số lượng có hạn: Duy nhất 5 Hợp Đồng, các
+        Hợp Đồng sau giảm 50% phí thiết kế).Áp dụng từ ngày 14/08/2019-29/08/2019</p>
+
+      <div id="clockdiv">
+        <div>
+          <span class="days"></span>
+          <div class="smalltext">Ngày</div>
+        </div>
+        <div>
+          <span class="hours"></span>
+          <div class="smalltext">Giờ</div>
+        </div>
+        <div>
+          <span class="minutes"></span>
+          <div class="smalltext">Phút</div>
+        </div>
+        <div>
+          <span class="seconds"></span>
+          <div class="smalltext">Giây</div>
+        </div>
+      </div>
+    </div>
+    <div class=" left">
+      <div class=" subscribe">
+        <i class="fas fa-gift"></i>
+        <p>Hãy để chúng tôi thiết kế không gian cho căn nhà của bạn</p>
+
+        <form>
+          <input type="text" name="text" placeholder="Họ và tên">
+          <input type="text" name="text" placeholder="Nhập số điện thoại">
+          <input type="text" name="text" placeholder="Diện tích bạn cần thiết kế và thi công">
+          <input type="text" name="text" placeholder="Phong cách bạn muốn thiết kế">
+          <input type="text" name="text" placeholder="Nhập địa chỉ">
+          <input type="text" name="email" placeholder="Địa chỉ Email của bạn">
+
+        </form>
+        <div>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalLong">
+            TƯ VẤN CHO TÔI
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title text-dark " id="exampleModalLongTitle">GREAT</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body text-dark">
+                  CẢM ƠN QUÝ KHÁCH <br>CHÚC QUÝ KHÁCH 1 NGÀY VUI VẺ
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <a href="#"><i class="fas fa-arrow-up " id='goTop'></i></a>
+  <footer>
+    <div class="">
+      <div class="row footer-top m-0">
+        <div class=" col-lg-3 col-md-6 footer-item">
+          <h4>Chủ Sở Hữu WS</h4>
+          <ul>
+            <li>Công Ty CP GREAT Việt Nam</li>
+            <li>Mã số thuế: 0105341857</li>
+            <li>Ngày cấp giấy phép: 02/06/2011</li>
+            <li>Đại diện pháp luật: Mai Văn Bảy</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item">
+          <h4>Thời gian làm việc</h4>
+          <ul>
+            <li>Thứ 2 - thứ 6: 8AM - 10PM</li>
+            <li>Thứ 7: 9AM - 8PM</li>
+            <li>Nghỉ Chủ Nhật và các ngày Lễ Tết</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item">
+          <h4>Hỗ trợ khách hàng</h4>
+          <ul>
+            <li><a href="contact.html">Liên hệ & Góp ý</a></li>
+            <li><a href="#">Hướng dẫn mua hàng online</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+            <!-- <li><a href="#">Chính sách bảo mật</a></li> -->
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 footer-item pr-0">
+          <h4>Địa CHỉ</h4>
+          <ul>
+            <li><a href="#">HH01-Thanh Hà-HN</a></li>
+            <li><a href="#">Duylinh87.wru@gmail.com</a></li>
+            <li><a href="#">SĐT:0968636309</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bot d-flex justify-content-center">
+        <div class="facbook iconItem">
+          <a href='#'> <i class="fab fa-facebook-f"></i> </a>
+        </div>
+        <div class="youtube iconItem">
+          <a href='#'> <i class="fab fa-youtube-square"></i></a>
+        </div>
+        <div class="instagram iconItem">
+          <a href='#'> <i class="fab fa-instagram"></i> </a>
+        </div>
+      </div>
+    </div>
+    <div class=" copyright">
+      <p>Copyright 2019 <i class="fa fa-copyright"></i> DuyLinh</p>
+    </div>
+  </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src='./js/great.js'>
+  </script>
+
+</body>
+
+</html>

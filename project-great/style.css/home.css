@@ -1,0 +1,543 @@
+.banner {
+    height :80vh;
+    background-image: url('./../Image/Home/bia.jpg') ;
+    background-repeat :no-repeat;
+    background-position:center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    position: relative;
+    animation:  nhay 10s  infinite;   
+}
+@keyframes nhay {
+    0%{background-image: url('./../Image/Home/bia.jpg' )}
+    50% { background-image: url("./../Image/Home/landmark-81-6.jpg");
+    }
+    100% {background-image: url('./../Image/Home/bia.jpg');
+    }}
+.menu.fix {
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        background:white;
+        top:0;
+        box-shadow:  0px 2px 2px 2px #DCDCDC;  
+        height: 60px;
+        padding: 5px 5px 5px;
+    }
+    
+.about {
+    padding: 0 10VW 0
+}
+.about >.title {
+    margin :30px 0 30px;
+    width: 100%;
+    /* z-index: 1001; */
+}
+.newProduce .title {
+    margin :0px 0 50px;
+    padding :60px 0 0px;
+    width: 100%;
+}
+.topProduce .title {
+    margin :0px 0 30px;
+    padding :60px 0 0px;
+    width: 100%;
+}
+.about>i {
+    display: block;
+    width: 50%;
+    margin: auto;
+    text-align: justify;
+    font-size: 16px;
+}
+header .divtitle {
+    height: 50px;
+    background: white;
+    width: 90%;
+    margin: auto;
+    /* z-index: 1500; */
+    position: absolute;
+    top:97%;
+    left: 5%;
+}
+.about button {
+   margin: 40px 0 50px;
+   width: 220px;
+}
+.btn-info {
+    color: #fff;
+    background: #26A69A;
+    border-color: #26A69A;
+}
+              /* san pham moi */
+.newProduce {
+    background: #f8f8f8;
+    
+}
+.newProduce .row{
+    overflow: hidden;
+    margin: 0
+}
+
+.newProduce .row .block2,.newProduce .row .block3  {
+    height:50%;
+}
+
+.newProduce .row div {
+    padding: 0;
+}
+.banner-content {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 80%;
+    z-index: 10;
+}
+.item1 .banner-content {
+    top: 3%;
+}
+.item1 .banner-content h3, .item1 .banner-content a {
+    color: #617f1e;
+}
+.item4 .banner-content h3, .item4 .banner-content a {
+    color: #333333;
+}
+.item5 .banner-content h3, .item5 .banner-content a {
+    color: #523004;
+    opacity: 0.7;
+}
+.banner-content h3 {
+    font-weight: 400;
+    font-size: 26px
+}
+.banner-content h3, .banner-content a {
+    text-transform: uppercase;
+}
+.slogan {
+    height :70vh;
+    background-image: url('./../Image/Home/6.jpg') ;
+    background-repeat :no-repeat;
+    background-position:center;
+    background-size: cover;
+    /* background-attachment: fixed; */
+    position: relative;
+}
+.slogan-content {
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    z-index: 10;
+    color: #D59039;
+    font-style: italic;
+}
+
+         /* san pham ban chạy */
+.topProduce {
+    background: #f8f8f8;  
+}
+.topProduce  .card-body {
+    padding: 0
+}
+.topProduce .card{
+    border-radius: 0;
+    transition: 1s;
+    text-align: center
+}
+.topProduce .card:hover{
+    box-shadow:  0px 0px 5px 1px grey;
+    transform: translateY(5px)
+}
+.topProduce .nav-tabs {
+    border-bottom: none
+}
+.topProduce .card .fa-star{
+    color: #FFD600
+}
+.topProduce span{
+    color: #630005;
+    font-size: 20px
+}
+.topProduce .sale:hover {
+    background: #c7ecee;  
+}
+.topProduce .sale{
+    font-size: 12px;
+    background: none;
+    color: #333333;
+    width: 75px;
+    height: 25px;
+    padding: 2px;
+    box-shadow: 0px 0px 2px 1px grey;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 20px
+}
+/* .topProduce .heart{
+    position: absolute;
+    top:45%;
+    left: 80%;
+    font-size: 20px;
+} */
+.topProduce .price{
+    background: darkgrey;
+    color: black
+}
+.topProduce .imgFather{
+    overflow: hidden
+}
+.topProduce .imgFather img{
+    transition: 2s;
+    cursor: pointer;
+}
+.topProduce .imgFather:hover img{
+    transform: scale(1.1)
+}
+.topProduce  a {
+    color: #333333
+}
+
+/* // cac buoc du an  */
+.procedure {
+    background-image: url('./../Image/Home/Rectangle\ 16\ \(1\).png') ;
+    height:620px;
+    background-size: cover;
+    background-repeat :no-repeat;
+    background-position:center;
+}
+.procedure p {
+    font-size: 14px
+}
+
+.procedure .title{
+    padding-top: 150px
+}
+.projectTop {
+    padding: 0px 10vw;
+}
+.projectTop .title{
+    padding-top: 50px;
+    padding-bottom: 20px
+}
+@media (min-width: 1400px) {
+	.procedure {
+		height:800px;
+    }
+    .procedure .title{
+        padding-top: 250px
+    }
+}
+
+/* // du an */
+.project {
+    background: white;
+    padding-top: 40px;
+    border-top: 1px solid #f8f8f8
+}
+.project h2{
+   font-size: 30px;
+   padding: 10px 0 0px 0
+}
+.project p{
+    margin-bottom:40px
+}
+.project .panels {
+    min-height:250px;
+    overflow: hidden;
+    display: flex;
+ }
+  .project  .panel {
+    background:#6B0F9C;
+    box-shadow:inset 0 0 0 5px rgba(255,255,255,0.1);
+    color:white;
+    text-align: center;
+    align-items:center;
+    /* Safari transitionend event.propertyName === flex */
+    /* Chrome + FF transitionend event.propertyName === flex-grow */
+    transition:
+      font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
+      background 0.2s;
+    font-size: 20px;
+    background-size:cover;
+    background-position:center;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    margin-right: 5px
+  }
+.project .panel1 { 
+      background-image:url(./../Image/Home/noithat.jpg) }
+.project .panel2 { 
+      background-image:url(./../Image/Home/nhadan.jpg) }
+/* .project .panel3 { 
+      background-image:url(./anh/00-00-klao-1a.jpg) } */
+.project .panel4 { 
+      background-image:url(./../Image/Home/noithat.jpg) }
+.project .panel5 { 
+      background-image:url(./../Image/Home/mamnon.jpg) }
+  /* Flex Items */
+.project .panel > * {
+      margin : 0  ;
+      width: 100%;
+      transition:transform 0.5s;
+      flex: 1 0 auto;
+      display:flex;
+      justify-content: center;
+     align-items: center;
+  }
+.project .panel > *:first-child { transform: translateY(-100%); }
+.project .panel.open-active > *:first-child { transform: translateY(0); }
+.project .panel > *:last-child { transform: translateY(100%); }
+.project .panel.open-active > *:last-child { transform: translateY(0); }
+.project .panel p {
+    text-transform: uppercase;
+    font-family: 'Amatic SC', cursive;
+    text-shadow:0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    font-size: 0.5em;
+  }
+.project .panel p:nth-child(2) {
+    font-size: 1em;
+  }
+.project .panel.open {
+    flex: 4;
+    font-size:40px;
+  }
+ .project button{
+   margin :40px 0 40px 0
+  }
+  /* //////khuyenmai */
+  #khuyenmai {
+    background-image: url('./../Image/Home/banner.jpg') ;
+    height:600px;
+    background-size: cover;
+    background-repeat :no-repeat;
+    background-position:center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr
+   
+  }
+  #khuyenmai::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 5;
+}
+#khuyenmai .rigth , #khuyenmai .left{
+    color: white;
+    width: 80%;
+    margin: auto;
+    z-index: 6;
+}
+#khuyenmai .left {
+    border: 2px solid white;
+    border-radius: 5px ;
+    padding: 20px
+
+}
+#khuyenmai .rigth {
+    text-align: center
+}
+#khuyenmai .rigth .item {
+    width: 50px;
+    height: 50px;
+    background: #212529;
+    color: white;
+    padding: 5px;
+    margin: auto
+}
+#clockdiv{
+	/* font-family: sans-serif; */
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;
+	border-radius: 3px;
+    /* border-color: #26A69A;
+    border-color: #26A69A; */
+	background: #26A69A;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #333333;
+	display: inline-block;
+}
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+.subscribe {
+    color: white;
+	/* height: 200px; */
+	text-align: center;
+	padding-top: 10px;
+	/* position: relative; */
+}
+.subscribe >i{
+    font-size: 30px;
+    color: #f9ca24
+}
+.subscribe input{
+	width: 80%;
+	padding: 5px;
+	position: relative;
+	color:black;
+    font-size: 15px;
+    border-radius: 2px;
+    transition: 0.3s;
+    margin: 5px;
+    background: none;
+    /* border: none; */
+    border-bottom: 1px solid white;  
+    color: white
+}
+.subscribe input:focus {
+    outline: none;
+    color: white
+}
+.subscribe input::placeholder {
+ 
+    color: white
+}
+.modal-backdrop {
+    z-index: 0;
+}
+.subscribe button .fa {
+	font-size: 22px;
+	color: #aaa;
+}
+.copyright p {
+	padding: 5px;
+	text-align: center;
+    background: #333333;
+    color: white; 
+}
+@media (min-width:992px){
+
+    .item1{
+        margin-bottom: -25vw
+    }
+    .item3 {
+        order: 5;
+        
+    }
+    .item4 {
+        order: 4;
+        margin-left: auto;
+    }
+}
+@media (max-width: 991px) and (min-width: 496px){
+    .item1{
+        margin-bottom: -50vw
+    }
+.item3 {
+    margin-left: auto;
+}}
+
+@media (max-width: 786px){
+
+    .menu .logoSmall{
+        display: block;
+        z-index: 100;
+    }
+    .banner {
+        z-index: -1;
+        background-attachment: inherit
+    }
+    .info .gmail {
+        display: none
+    }
+    .policy i {
+        font-size: 40px;
+        margin-bottom: 16px
+    }
+    .policy h5{
+        font-size: 18px;
+    }
+    .slogan-content {
+        position: absolute;
+        top: 35%;
+        left: 0%;
+        width: 100%;
+        z-index: 10;
+        color: #D59039;
+        font-style: italic;
+    }
+    .procedure {
+		height:1200px;
+    }
+    .procedure .title{
+        padding-top: 270px
+    }
+    .project .panels {
+     
+        flex-direction: column;
+      }
+    .project .panel > *:first-child { transform: translateY(-80%); }
+     #khuyenmai {
+        grid-template-columns: 1fr 
+      }
+     #khuyenmai .rigth , #khuyenmai .left{
+        color: white;
+        width: 70%;
+        }
+    #khuyenmai {
+        height: 1100px;
+          }
+}
+@media (max-width: 600px) {
+        .procedure {
+            height:1730px;
+        }
+        .procedure .title{
+            padding-top: 400px
+        }
+        .banner-content h3 {
+            font-weight: 400;
+            font-size: 20px
+        }
+        h3 {
+            font-size: 24px 
+        }
+    
+    }
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
