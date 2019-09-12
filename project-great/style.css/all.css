@@ -179,8 +179,8 @@ header .rigth ,header .left{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
                   /* phan bia chinh */
-.banner .logo1 ,.banner .logo2 ,.bannerr .logo3 ,
-.banner .logo4 ,.banner .logo5 {
+ .logo1 , .logo2 , .logo3 ,
+ .logo4 ,.logo5 {
     font-size: 50px;
     font-weight: 700;
     color: black
@@ -304,15 +304,15 @@ footer {
         width: 100%;
         position: relative;
         background: white;
-        z-index: 3;
+        z-index: 30;
     }
     .logoSmall {
         display: inline-block;
         float: right;
         font-size: 10px;
         position: absolute;
-        left: 45%;
-        z-index: 5;
+        left: 40%;
+        z-index: 50;
     }
     .logo {
         display: none
@@ -333,18 +333,37 @@ footer {
     }
  
 }
+
  
 @media (max-width: 576px){
     header .menu {
         height: 65px;
+        padding: 15px 0px 0;
     }
-
     .phone {
         display: none
     }
     .logoSmall {
-        left: 60%;
+        left: 35%;
     }
+    h3 {
+        font-size: 18px 
+    }
+    header .info {
+        padding: 5px 10px 0;
+        font-size: 12px;
+        height: 35px;
+        position: relative;
+        background: #333333;
+        color: white;
+    }
+    .logo1 , .logo2 , .logo3 ,
+    .logo4 ,.logo5 {
+       font-size: 30px;
+       font-weight: 400;
+       color: black
+   }
+
 }
 
 

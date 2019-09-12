@@ -479,3 +479,11 @@ margin: 10px;
 margin: auto
 }
 
+@media (max-width: 576px){
+.content {
+    background: #fff;
+    padding: 5px;
+    clear: both;
+    margin-bottom: 10px;
+}
+}

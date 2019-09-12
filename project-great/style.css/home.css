@@ -268,7 +268,7 @@ header .divtitle {
     margin-right: 5px
   }
 .project .panel1 { 
-      background-image:url(./../Image/Home/noithat.jpg) }
+      background-image:url(./../Image/Home/vanphong.png) }
 .project .panel2 { 
       background-image:url(./../Image/Home/nhadan.jpg) }
 /* .project .panel3 { 
@@ -507,14 +507,33 @@ header .divtitle {
             font-weight: 400;
             font-size: 20px
         }
+        h2,.project h2 {
+            font-size: 20px 
+        }
+        
         h3 {
-            font-size: 24px 
+            font-size: 18px 
         }
         .procedure {
             background-image: none;
          
         }
+        header .info {
+            padding: 5px 10px 0;
+            font-size: 12px;
+            height: 35px;
+            position: relative;
+            background: #333333;
+            color: white;
+        }
+        .projectTop {
+            padding: 0px 5vw;
+        }
+        .about {
+            padding: 0 5VW 0;
+        }
     
+
     }
 
 
