@@ -450,10 +450,7 @@ header .divtitle {
 
 @media (max-width: 786px){
 
-    .menu .logoSmall{
-        display: block;
-        z-index: 100;
-    }
+ 
     .banner {
         z-index: -1;
         background-attachment: inherit
@@ -501,10 +498,10 @@ header .divtitle {
 }
 @media (max-width: 600px) {
         .procedure {
-            height:1730px;
+            height:1250px;
         }
         .procedure .title{
-            padding-top: 400px
+            padding-top: 30px
         }
         .banner-content h3 {
             font-weight: 400;
@@ -512,6 +509,10 @@ header .divtitle {
         }
         h3 {
             font-size: 24px 
+        }
+        .procedure {
+            background-image: none;
+         
         }
     
     }
