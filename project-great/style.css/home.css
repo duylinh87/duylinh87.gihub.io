@@ -532,8 +532,10 @@ header .divtitle {
         .about {
             padding: 0 5VW 0;
         }
+        .menu.fix {
+            display: none
+        }
     
-
     }
 
 

@@ -365,6 +365,19 @@ footer {
    }
 
 }
+@media (max-width: 320px){
+    header .info {
+        padding: 5px 10px 0;
+        font-size: 10px;
+        height: 35px;
+        position: relative;
+        background: #333333;
+        color: white;
+    }
+
+
+
+}
 
 
     
