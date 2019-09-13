@@ -493,7 +493,7 @@ header .divtitle {
         width: 70%;
         }
     #khuyenmai {
-        height: 1100px;
+        height: 800px;
           }
 }
 @media (max-width: 600px) {
@@ -534,6 +534,19 @@ header .divtitle {
         }
         .menu.fix {
             display: none
+        }
+        #clockdiv {
+            font-weight: 50;
+            text-align: center;
+            font-size: 15px;
+        }
+        #clockdiv > div {
+            padding: 2px;
+
+        }
+        #khuyenmai .left {
+            color: white;
+            width: 90%;
         }
     
     }
