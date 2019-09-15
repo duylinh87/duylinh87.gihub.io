@@ -1,0 +1,388 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+/* entypo */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+/* fontawesome */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+/* Utils */
+
+.clear {
+	clear: both;
+}
+.purple {
+	color: #837c9a;
+}
+
+.block {
+	margin: 25px 30px;
+}
+	.block h1 {
+		margin-left: -5px;
+		font-weight: 200;
+	}
+
+.last.block {
+	margin-bottom: 110px;
+}
+.contetRight {
+	/* border-right: 1px #403F44 solid;
+	box-shadow: #837c9a; */
+	background: #333333
+}
+
+.horizontal_list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+	.horizontal_list li {
+		float: left;
+	}
+	.horizontal_list li:before {
+		content: none;
+	}
+	.horizontal_list li { 
+		padding-left: 0; 
+		text-indent: 0;
+	}
+
+.horizontal_line{
+	margin: 34px 0 0 30px;
+	height: 26px;
+	position: relative;	
+}
+	.line_left,
+	.line_right{
+		border-top: 1px solid #434247;
+		width: 100%;
+		margin-top: 13px;
+	}
+	.line_left{
+		float: left;
+	}
+	.line_right {
+		float: right;
+	}
+	.left_circle, 
+	.central_circle, 
+	.right_circle {
+		background: rgb(69,68,73);
+		background: rgba(255,255,255, 0.15);
+		position: absolute;
+		border-radius: 50px;
+	}
+	.left_circle, 
+	.right_circle {
+		width: 13px;
+		height: 13px;
+		top: 7px;
+	}
+	.left_circle{
+		left: 314px;
+	}
+	.central_circle{
+		width: 26px;
+		height: 26px;		
+		top: 0px;
+		left: 322px;
+	}
+	.right_circle{
+		left: 343px;
+	}
+	
+/* Main tags */
+
+/* body {
+ 
+    background: #333333;
+
+} */
+
+h1,h2,h3, h4 {
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-weight: 300;
+	color: #48DA9B;
+}
+	h1 {
+		font-size: 48px;
+		font-weight: 300;
+		margin: 20px 0;
+	}
+	h2 {
+		font-size: 28px;
+		margin: 32px 0 24px;
+	}
+	h3 {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+blockquote {
+	font-style: italic;
+	margin: 25px 0;
+	padding-left: 20px;
+	border-left: 2px solid #48DA9B;
+}
+
+
+
+
+	
+blockquote, p , a, li {
+	font-family: 'Lato', Helvetica, sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	color: white
+}
+
+
+a:focus { 
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+	li { 
+		padding-left: 1em; 
+		text-indent: -.7em;
+	}
+	li:before {
+		content: "• ";
+		color: #837c9a;
+		font-size: 20px;
+		padding-right: 8px;
+	}
+
+/* Containers size */
+
+.container-fulid {
+
+	margin: auto;
+	padding: 10px 30px 10px 30px
+}
+	#header {
+		height: 130px;
+		border-bottom: 1px solid #403F44;
+	}
+		.header_logotype_container {
+			width: 100%;
+			height: 90px;
+		
+
+		}
+		.header_menu_container {
+			height: 50px;
+			width: 100%;
+		
+		}
+			.header_menu_container a {
+				font-family: 'Lato', Helvetica, sans-serif;
+			}
+
+
+/* HEADER */
+
+.logotype_name{
+	text-transform: uppercase;
+	font-size: 2em;
+	margin: 43px 0 0;
+}
+.logotype_occupation{
+	text-transform: uppercase;
+	margin-top: 5px;
+	color: #5ce2af;
+	font-size: 1em;
+	letter-spacing: 2px;
+	padding-left: 7px;
+}
+
+
+			
+.header_menu {
+	width: 100%;
+	margin-top: 40px;
+	margin-left: 5px;
+}
+	.header_menu a{
+		text-decoration: none;
+		padding: 0 20px;
+		border-left: 1px solid #e4e3e8;
+		font-size: 16px;
+		font-weight: 400;
+	}
+	.header_menu a.no_border{
+		border-left: none;
+	}
+		.header_menu a:hover {
+			color: #837c9a;
+		}
+		
+/* LEFT NAV */
+.contetLeft1 {
+	border-right: 1px rgba(255,255,255, 0.15) solid;
+	background: #333333
+}
+
+#left_nav h2 {
+	margin: 0;
+	font-size: 24px;
+}
+
+.profile_frame{
+	width: 70%;
+	height :250px;
+	background-image: url(./Rectangle\ 20.png);
+	background-repeat :no-repeat;
+    background-position:center;
+	background-size: cover;
+	position: relative;
+	margin: 0px auto 10px auto;
+	animation:  nhay 10s  infinite;   
+	border-radius: 50%
+}
+@media (max-width: 786px){
+	.profile_frame{
+	 height :150px;
+	}
+	.header_logotype_container {
+		width: 100%;
+		height: 90px;
+	}
+	.header_menu_container {
+		height: 50px;
+		width: 100%;
+	}
+	.logotype_name {
+		font-size: 24px;
+	}
+	.logotype_occupation {
+		font-size: 10px;
+	}
+}
+@media (max-width: 576px){
+	.profile_frame{
+	 height :250px;
+	}
+	.container-fulid {
+		margin: auto;
+		padding: 10px 15px 10px 15px;
+	}
+	.contetLeft1 {
+		border-right: none;
+		margin: auto;
+		text-align: center
+	}
+	.left_circle, .right_circle,.central_circle {
+		width: 0px;
+
+	}
+	.block {
+		margin: 25px 15px;
+	}
+	.contetLeft1 .horizontal_list >li {
+		padding-left: 45px;
+		text-indent: 0;
+	}
+}
+
+@keyframes nhay {
+    0%{background-image: url('./Rectangle\ 20.png' )}
+    50% { background-image: url("./2.png");
+    }
+    100% {background-image: url('./Rectangle\ 20.png');
+    }}
+
+.hello_content,
+.contact_details_content {
+	margin-top: 25px;
+}
+
+
+.contact_details_content h2 + p.purple{
+	margin-top: 10px;
+}
+.contact_details_content p{
+	margin: 0;
+}
+.contact_details_content p.purple{
+	margin-top: 25px;
+}
+
+
+
+.get_social_content {
+	margin-top: 15px;
+}
+  .get_social_content h2{
+    margin-bottom: 8px;
+  }
+	.social_icons {
+		margin-left: -8px;
+	}
+	.social_icons a {
+		font-size: 35px;
+		text-decoration: none;
+		color: #000507;
+		padding: 0;
+		padding: 0 5px;
+	}
+		.social_icons a span.invisible {
+			display:none;
+		}
+		.social_icons .facebook:hover{
+			background: #3b5998;
+			color: #dfe3ee;
+			border-top-right-radius: 50px;
+			border-bottom-left-radius: 50px;
+		}
+		.social_icons .twitter:hover{
+			background: #00B0ED;
+			color: #fff;
+			border-top-left-radius: 50px;
+			border-bottom-right-radius: 50px;
+		}
+		.social_icons .linkedin:hover{
+			background: #007bb6;
+			color: #fff;
+			border-top-right-radius: 50px;
+			border-bottom-left-radius: 50px;
+		}
+
+.footer_name {
+	font-style: italic;
+	margin-top: 20px;
+}
+
+/* Profile Content */
+
+.profile_quote {
+	position: relative;
+	/* margin-left: 5px; */
+}
+	.profile_quote p {
+		font-size: 17px;
+		width: 100%;
+	}
+
+.philosophy_content {
+	margin-top: 20px;
+}
+	.philosophy_content p {
+		margin: 0;
+		width: 100%;
+		float: left;
+	}
+	.philosophy_content ul {
+		float: left;
+		padding-left: 40px;
+	}
