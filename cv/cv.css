@@ -293,6 +293,10 @@ ul {
 		padding-left: 45px;
 		text-indent: 0;
 	}
+	.col-lg-6 {
+		margin-top:15px
+	}
+
 }
 
 @keyframes nhay {
