@@ -313,6 +313,7 @@ footer {
         position: absolute;
         left: 40%;
         z-index: 50;
+     
     }
     .logo {
         display: none
@@ -322,10 +323,11 @@ footer {
         width: 90%;
         border-bottom: 1px solid gray;
         margin: auto;
+        padding-top: 30px
       }
       header .rigth ,header .left{
         width: 100%;
-        margin-top: 15px
+      
     }
     .navbar-collapse {
         background: white;
@@ -363,6 +365,9 @@ footer {
        font-weight: 400;
        color: black
    }
+   .navbar-light .navbar-nav .active {
+    padding-top: 10px
+  }
 
 }
 @media (max-width: 320px){
@@ -374,7 +379,6 @@ footer {
         background: #333333;
         color: white;
     }
-
 
 
 }
