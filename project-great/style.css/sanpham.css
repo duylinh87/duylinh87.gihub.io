@@ -438,6 +438,13 @@ li {
     margin-bottom: 10px
 }
 
+/* duan */
+.card-img-top.one,.card-img-top.two,.card-img-top.three,.card-img-top.four {
+    opacity: 0;
+}
+
+
+
 /* // phong thuy */
 
 @media (max-width: 786px){

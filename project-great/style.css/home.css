@@ -4,7 +4,6 @@
     background-repeat :no-repeat;
     background-position:center;
     background-size: cover;
-    /* background-attachment: fixed; */
     position: relative;
     animation:  nhay 10s  infinite;   
 }
@@ -21,7 +20,7 @@
         background:white;
         top:0;
         box-shadow:  0px 2px 2px 2px #DCDCDC;  
-        height: 60px;
+        height: 65px;
         padding: 5px 5px 5px;
     }
     
@@ -31,7 +30,6 @@
 .about >.title {
     margin :30px 0 30px;
     width: 100%;
-    /* z-index: 1001; */
 }
 .newProduce .title {
     margin :0px 0 50px;
@@ -55,7 +53,6 @@ header .divtitle {
     background: white;
     width: 90%;
     margin: auto;
-    /* z-index: 1500; */
     position: absolute;
     top:97%;
     left: 5%;
