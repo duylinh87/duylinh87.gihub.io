@@ -368,6 +368,10 @@ footer {
    .navbar-light .navbar-nav .active {
     padding-top: 10px
   }
+  .modal {
+    top: 0px;
+    left: 0px
+}
 
 }
 @media (max-width: 320px){

@@ -259,19 +259,23 @@ li {
 }
 .content  {
     background: #fff;
-    padding: 25px;
+    padding: 5px;
     clear: both;
-    margin-bottom: 30px
+    margin-bottom: 30px;
+    margin-top: 5px
 }
 .respond-wrap input[type="text"], .comment-form textarea {
     border: 1px solid #e7e7e7;
     background: #f8f8f8;
     color: #666666;
     margin-bottom: 10px;
-    padding: 10px 20px;
+    padding: 10px 5px;
     line-height: 22px;
     font-size: 16px;
-    width: 100%;
+    width: 95%;
+}
+.comment-form textarea{
+    width: 97.5%;
 }
 .form-submit,.add-to-cart  {
     margin: 30px auto;
@@ -491,10 +495,27 @@ margin: auto
 }
 
 @media (max-width: 576px){
-.content {
-    background: #fff;
-    padding: 5px;
-    clear: both;
-    margin-bottom: 10px;
-}
+    .content {
+        background: #fff;
+        padding: 10px;
+        clear: both;
+        margin-bottom: 10px;
+        
+    }
+    .info {
+        padding: 15px
+    }
+    .contentAbout {
+        width: 90%;
+    }
+    .payment-main {
+        width: 95%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .respond-wrap input[type="text"], .comment-form textarea {
+
+        width:90%;
+    }
+
 }
