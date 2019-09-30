@@ -404,7 +404,7 @@ li {
         display: none;
     }
     .cart-container table.cart th {
-        padding: 10px 0;
+        padding: 20px 0;
         font-size: 10px;
         text-align: center
     }
@@ -427,13 +427,12 @@ li {
     .cart-container table.cart .product-price,.cart-container table.cart .product-name {
         display: none;
     }
-    .cart-container table.cart td {
-    
-        padding: 0px 0;
+    /* .cart-container table.cart td {
+        padding: 20px 0;
         font-size: 12px;
         font-weight: 600;
         text-transform: uppercase;
-    }
+    } */
     .quantity {
         font-weight: 600;
         margin: 0px 5px 0 15px;
