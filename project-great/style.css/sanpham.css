@@ -363,6 +363,7 @@ li {
     background: #fff;
     padding: 30px;
     border: 1px solid #e7e7e7;
+    margin: 40px 0;
 }
 .cart-coupon input {
     color: #777;
@@ -373,6 +374,9 @@ li {
     padding: 0 15px;
     margin: 25px 0 10px;
     font-size: 16px;
+}
+.titlePrice {
+    font-size: 20px
 }
 .cart-total > table th {
     width: 80%;
@@ -444,7 +448,9 @@ li {
 .payment-main input {
     margin-bottom: 10px
 }
-
+.form-control {
+    margin-top: 10px
+}
 /* duan */
 .card-img-top.one,.card-img-top.two,.card-img-top.three,.card-img-top.four {
     opacity: 0;
