@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+body {
+  margin: 0; }
+
+.content {
+  max-width: 100%;
+  margin: 0px;
+  padding-left: 2.5rem;
+  display: flex; }
+  .content .right {
+    width: 15%;
+    background: #ffffff;
+    border-left: 1px solid gray;
+    margin-left: 0.625rem;
+    text-align: center; }
+    .content .right > h1 {
+      font-size: 20px;
+      text-align: center;
+      padding: 0.625rem; }
+    .content .right button {
+      border-radius: 5px;
+      cursor: pointer;
+      padding: 0;
+      margin: 5px;
+      width: 85%; }
+      .content .right button:hover, .content .right button:focus {
+        border: 3px solid gray;
+        outline: none; }
+    .content .right img {
+      width: 100%; }
+  .content .left {
+    width: 85%;
+    margin-top: 2.5rem;
+    background: #ffffff;
+    border: 1px solid gray;
+    border-radius: 10px;
+    height: 110 vh;
+    margin-left: -10px;
+    box-shadow: 1px 1px 1px 1px gray; }
+    .content .left input {
+      background: gray;
+      color: gray;
+      margin: 8px;
+      padding-left: 10px;
+      width: 110px; }
+      .content .left input:hover {
+        background: #ffffff;
+        color: #ffffff; }
+    .content .left #preview {
+      position: relative; }
+      .content .left #preview .countResidual {
+        font-size: 40px;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); }
+
+#allImg {
+  height: 120px;
+  background: #333333;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  overflow: hidden; }
+  #allImg .imageDiv {
+    height: 100%;
+    margin: 8px; }
+  #allImg img {
+    width: auto;
+    height: 110px; }
+
+.twoImg {
+  padding: 0;
+  width: 650px;
+  height: 550px;
+  margin: auto auto 30px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr); }
+  .twoImg .item1 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    background: #dcdcdc;
+    cursor: move; }
+  .twoImg .item2 {
+    cursor: move;
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    background: #dcdcdc;
+    position: relative; }
+
+.threeImg {
+  padding: 0;
+  width: 650px;
+  height: 600px;
+  margin: auto auto 30px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr); }
+  .threeImg .item1 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 8;
+    grid-row-end: 13;
+    background: #dcdcdc; }
+  .threeImg .item2 {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 8;
+    grid-row-end: 13;
+    background: #dcdcdc; }
+  .threeImg .threeImgUp {
+    grid-column-start: 1;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 8;
+    background: #dcdcdc; }
+
+.fourImg {
+  width: 800px;
+  height: 600px;
+  margin: auto auto 30px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr); }
+  .fourImg .item1 {
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    background: #dcdcdc; }
+  .fourImg .item2 {
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row-start: 5;
+    grid-row-end: 9;
+    background: #dcdcdc; }
+  .fourImg .item3 {
+    grid-column-start: 10;
+    grid-column-end: 13;
+    grid-row-start: 9;
+    grid-row-end: 13;
+    background: #dcdcdc; }
+  .fourImg .fourImgLeft {
+    grid-column-start: 1;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 13;
+    background: #dcdcdc; }
+
+.fivImg {
+  padding: 0;
+  height: 550px;
+  width: 700px;
+  margin: auto auto 30px;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr); }
+  .fivImg .item1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    background: #dcdcdc; }
+  .fivImg .item2 {
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    background: #dcdcdc; }
+  .fivImg .item3 {
+    grid-column-start: 9;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    background: #dcdcdc; }
+  .fivImg .item4 {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 13;
+    background: #dcdcdc; }
+  .fivImg .item5 {
+    grid-column-start: 7;
+    grid-column-end: 13;
+    grid-row-start: 5;
+    grid-row-end: 13;
+    background: #dcdcdc; }
+
+.defulalt {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center; }
+  @media (max-width: 1024px) {
+    .content .left {
+        height: 80vh;
+    }
+  }
+
+
+@media (max-width: 876px) {
+  .right img {
+    max-width: 70px; }
+
+  .card {
+    left: 20%; }
+
+  #preview img {
+    max-width: 270px; } }
+@media (max-aspect-ratio: 1 / 1) and (max-width: 576px) {
+  .content {
+    margin: 0rem;
+    padding: 0rem;
+    flex-direction: column; }
+    .content .right {
+      margin: 0rem;
+      width: 100%;
+      height: 10vh;
+      padding-top: 5px;
+      padding-bottom: 8px; }
+      .content .right img {
+        max-width: 50px; }
+      .content .right h1, .content .right hr, .content .right br {
+        display: none; }
+      .content .right button {
+        width: 16%; }
+    .content .left {
+      margin: 0rem;
+      height: 70vh;
+      width: 100%; }
+      .content .left #preview {
+        flex-direction: row; }
+        .content .left #preview > img {
+          width: 100%;
+          max-height: none;
+          height: auto; }
+        .content .left #preview .countResidual {
+          font-size: 20px; }
+
+  .twoImg {
+    height: 350px;
+    width: 310px; }
+
+  .threeImg {
+    height: 350px;
+    width: 310px; }
+
+  .fourImg {
+    height: 350px;
+    width: 310px; }
+
+  .fivImg {
+    padding: 0;
+    height: 350px;
+    width: 310px; } }
+
+/*# sourceMappingURL=style%20copy.css.map */
