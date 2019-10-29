@@ -8,8 +8,8 @@
     <title>TaskUpload</title>
     <link rel="stylesheet" href="./style.css">
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> -->
 
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 </head>
@@ -17,41 +17,49 @@
 <body>
     <!-- <h2 class='text-center'> TASK UPLOAD </h2> -->
 
-    <div class='row content'>
-        <div class="col-md-10 left">
+    <div class=' content'>
+        <div class=" left">
             <input id="browse" type="file" multiple>
             <div id="preview" class='defulalt'>
 
             
             </div>
+
         </div>
-        <div class="col-md-2  right ">
-            <h1> Template Layout</h1>
+        <div class=" right ">
+            <h1> Template Layout(3)</h1>
             <hr>
-            <button onclick='twoImg()'>
+            <button onclick='showTwoImg()'>
                 <img src='./anh2.png'>
             </button >
              <br>
-            <button onclick='threeImg()'>
+            <button onclick='showThreeImg()'>
                 <img src='./anh3.png'>
             </button>
             <br>
-            <button onclick='fourImg()'>
+            <button onclick='showFourImg()'>
                 <img src='./anh4.png'>
             </button>
             <br>
-            <button onclick='fivImg()'>
+            <button onclick='showFivImg()'>
                 <img src='./anh5.png'>
             </button>
-            
         </div>
     </div>
-      <div id ='allImg'> 
 
+    <div id="modal01" class="modal" onclick="this.style.display='none'">
+        <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+        <div class="modal-content">
+            <img id="img01" style="max-width:100%">
+        </div>
     </div>
+
+    <div id ='allImg'> 
+
+     </div>
    
 
-
+    <!-- https://codepen.io/therealDaze/pen/ZaoErp -->
 
     <!-- <span id="draggable" >Drap me<span> -->
 
@@ -73,6 +81,58 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- base64 là phương thức convert dạng mã hóa 2 chiều từ binary sang string để có thể gửi đi được trong network một cách dễ dàng -->
+
+<!-- binary là dạng nhị phân -->
 
 
 

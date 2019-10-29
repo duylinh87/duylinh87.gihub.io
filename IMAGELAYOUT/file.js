@@ -32,7 +32,6 @@ EL_browse.addEventListener('change', ev => {
 });
 
 
-
 function shuffleArray(array) {
       for (let i = array.length - 1; i > 0; i--) {
              let j = Math.floor(Math.random() * (i + 1));
@@ -42,88 +41,71 @@ function shuffleArray(array) {
       }
 }
 
-function render(arrySrc) {
+
+function showAllImg(arrySrc) {
 	let content = '';
         content = arrySrc.map((item,index) => {
            return `
                   <div class ='imageDiv'>
-                        <a href= ${item}> 
-                                    <img src=${item} alt= ${item}> 
-                        </a>
+                         
+                               <img src=${item} alt= ${item} onclick="onClick(this)" class="modal-hover-opacity"> 
+                        
                   </div>                  
 			 `
 	    })
 	$('#allImg').html(content)
 }
 
-function twoImg () {
-      shuffleArray (arrySrc)
-      render(arrySrc)
+
+function showTwoImg () {
       console.log (arrySrc)
+      shuffleArray (arrySrc)
+      showAllImg(arrySrc)
             let oneImg = arrySrc[0];
             let twoImg = arrySrc[1];
             let content ='';
-            let countImgResidual = '';
-            let plus = arrySrc.length < 2 || arrySrc.length === 2 ? '' : '+'
-            if ( arrySrc.length > 2) {
-                  countImgResidual = arrySrc.length -2
-            }
+            let countImgResidual = arrySrc.length > 2 ? (arrySrc.length -2) : '';
+            let plus = arrySrc.length < 2 || arrySrc.length === 2 ? '' : '+';
+            let lastImg = arrySrc.length < 2 || arrySrc.length === 2 ? '' : 'lastImg'
 
       if ( arrySrc.length === 0) { 
             content = ` 
-            <div class=' twoImg'>
-                        <div  class='item1 '> 
-                                        
-                        </div> 
-                        
-                        <div class='item2 ' >
-                                    
-                        
-                        </div>
-            </div>
+                  <div class='twoImg'>
+                              <div  class='item1'>                   
+                              </div> 
+                              <div class='item2'>         
+                              </div>
+                  </div>
             `
           divPreview.html(content) 
       }
-
-       else {
+      else {
             content = ` 
-            <div class='twoImg'>
-                        <div  class='item1 '  style = 'background-image: url(${oneImg}); 
-                                                            background-size: cover;
-                                                            position: relative;
-                                                            background-repeat: no-repeat;
-                                                            background-position: center;'>   
-                                                                   
-                        </div> 
-                     
-                        
-                        <div class='item2 '  style = 'background-image: url(${twoImg}); 
-                                                            background-size: cover;
-                                                            position: relative;
-                                                            background-repeat: no-repeat;
-                                                            background-position: center;'>
-                                          <span class = 'countResidual' > ${plus}${countImgResidual} </span>
-                                            
-                        
-                        </div>
-            </div>
+                  <div class='twoImg'>
+                              <div  class='item1' ondrop="drop(event)" ondragover="allowDrop(event)">  
+                              <img src = ${oneImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag1">                                                        
+                              </div> 
+                              <div class='item2  ${lastImg}'  ondrop="drop(event)" ondragover="allowDrop(event)">
+                              <img src = ${twoImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag2">                                
+                              <span class = 'countResidual' > ${plus}${countImgResidual} </span> 
+                              </div>         
+                  </div>
             `
            divPreview.html(content)
-       }
+      }
 }
 
 
-function threeImg () {
+function showThreeImg () {
       shuffleArray (arrySrc)
+      showAllImg(arrySrc)
             let oneImg = arrySrc[0];
             let twoImg = arrySrc[1];
             let threeImg = arrySrc[2];
             let content ='';
-            let countImgResidual = '';
-            let plus = arrySrc.length < 3 || arrySrc.length === 3 ? '' : '+'
-            if ( arrySrc.length > 3) {
-                  countImgResidual = arrySrc.length -3
-            }
+            let countImgResidual = arrySrc.length > 3 ? (arrySrc.length -3) : '';
+            let plus = arrySrc.length < 3 || arrySrc.length === 3 ? '' : '+';
+            let lastImg = arrySrc.length < 3 ||  arrySrc.length === 3 ? '' : 'lastImg'
 
 
       if ( arrySrc.length === 0) { 
@@ -131,148 +113,93 @@ function threeImg () {
             <div class='threeImg'>
                   <div class=" threeImgUp">  
                   </div>
-                  
-                        <div class='item1' >
-                        
+                        <div class='item1'>
                         </div>
-                        <div class='item2 '>
-                        
+                        <div class='item2'>
                         </div>
-                  
             </div>
             `
           divPreview.html(content) 
       }
-
-
-      else {
+      else {      
             content = `
-            <div class=' threeImg'>
-                  <div class=" threeImgUp"  style = 'background-image: url(${oneImg}); 
-                                                              background-size: cover;
-                                                              position: relative;
-                                                              background-repeat: no-repeat;
-                                                              background-position: center center;
-                  '>
+            <div class=' threeImg' >
+                  <div class=" threeImgUp "  ondrop="drop(event)" ondragover="allowDrop(event)" >
+                       <img src = ${oneImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag1 "> 
+                  </div>
+                  <div class='item1 ' ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src = ${twoImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag2"> 
                   
                   </div>
-             
-                  <div class='item1 '  style = 'background-image: url(${twoImg}); 
-                                                            background-size: cover;
-                                                            position: relative;
-                                                            background-repeat: no-repeat;
-                                                            background-position: center;'>
-                  
+                  <div class='item2 ${lastImg} '  ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src = ${threeImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag3"> 
+                        <span class = 'countResidual'> ${plus}${countImgResidual} </span>
                   </div>
-                  <div class='item2 '  style = 'background-image: url(${threeImg});  
-                                                            background-size: cover;
-                                                            position: relative;
-                                                            background-repeat: no-repeat;
-                                                            background-position: center;'>
-                                                            <span class = 'countResidual' > ${plus}${countImgResidual} </span>
-                  
-                  </div>
-                  
             </div>
             `
             divPreview.html(content)
+      
       }
 }
-  
 
-function fourImg () {
+
+function showFourImg () {
       shuffleArray (arrySrc)
+      showAllImg(arrySrc)
             let oneImg = arrySrc[0];
             let twoImg = arrySrc[1];
             let threeImg = arrySrc[2];
             let fourImg = arrySrc[3];
             let content ='';
-            let countImgResidual = '';
-            let plus = arrySrc.length < 4 || arrySrc.length === 4 ? '' : '+'
-            if ( arrySrc.length > 4) {
-                  countImgResidual = arrySrc.length -4;
-                  // $('itme3').addClass ('classthemnen')
-            }
+            let countImgResidual = arrySrc.length > 4 ? (arrySrc.length - 4) : '';
+            let plus = arrySrc.length < 4 || arrySrc.length === 4 ? '' : '+';
+            let lastImg = arrySrc.length < 4 || arrySrc.length === 4 ? '' : 'lastImg'
+
 
       if ( arrySrc.length === 0) { 
             content = ` 
-            <div class =' fourImg'> 
-                  <div class=" fourImgLeft" >
-
+                  <div class =' fourImg'> 
+                        <div class=" fourImgLeft" >
+                        </div>
+                              <div class ='item1'>
+                              </div>
+                              <div class ='item2'>
+                              </div>
+                              <div class ='item3'>
+                              </div>
                   </div>
-               
-                        <div class ='item1'>
-                        
-                        <!-- <img src ='./anh1.jpg' class = 'img-fluid'> -->
-                        </div>
-                        <div class ='item2'>
-                        
-                        <!-- <img src ='./anh8.jpg' class = 'img-fluid'> -->
-                        </div>
-                        <div class ='item3'>
-                        <!-- <img src ='./anh10.jpg' class = 'img-fluid'> -->
-                        </div>
-              
-            
-            </div>
 
             `
           divPreview.html(content) 
       }
       
-
-
       else {
             content = `
-            <div class =' fourImg'> 
-                  <div class=" fourImgLeft" style = 'background-image: url(${oneImg});  
-                                                            background-size: cover;
-                                                            position: relative;
-                                                            background-repeat: no-repeat;
-                                                            background-position: center;'
-                  >
-                 
-                  <!-- <img src = './anh5.jpg' class = 'img-fluid'> --> 
+            <div class =' fourImg' > 
+                  <div class=" fourImgLeft " ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src = ${oneImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag1"> 
                   </div>
-                        <div class ='item1' style = 'background-image: url(${twoImg});
-                                                      background-size: cover;
-                                                      position: relative;
-                                                      background-repeat: no-repeat;
-                                                      background-position: center;'
-                        >
-                        <!-- <img src ='./anh1.jpg' class = 'img-fluid'> -->
-                        </div>
-                        <div class ='item2' style = 'background-image: url(${threeImg});  
-                                                      background-size: cover;
-                                                      position: relative;
-                                                      background-repeat: no-repeat;
-                                                      background-position: center;'
-                        
-                        >
-                        <!-- <img src ='./anh8.jpg' class = 'img-fluid'> -->
-                        </div>
-                        <div class ='item3' style = 'background-image: url(${fourImg});  
-                                                      background-size: cover;
-                                                      position: relative;
-                                                      background-repeat: no-repeat;
-                                                      background-position: center;'
-                        
-                        
-                        >
-                        <span class = 'countResidual' > ${plus}${countImgResidual} </span>
-                        <!-- <img src ='./anh10.jpg' class = 'img-fluid'> -->
-                        </div>
-                 
-                  
+                  <div class ='item1' ondrop="drop(event)" ondragover="allowDrop(event)"> 
+                         <img src = ${twoImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag2"> 
+                  </div>
+                  <div class ='item2' ondrop="drop(event)" ondragover="allowDrop(event)"> 
+                         <img src = ${threeImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag3">
+                  </div>
+                  <div class ='item3 ${lastImg}' ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <img src = ${fourImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag4"> 
+                        <span class = 'countResidual'> ${plus}${countImgResidual} </span>
+                  </div>
             </div>
+   
             `
             divPreview.html(content)
       }
 }
 
 
-function fivImg() {
+function showFivImg() {
       shuffleArray (arrySrc)
+      showAllImg(arrySrc)
             let oneImg = arrySrc[0];
             let twoImg = arrySrc[1];
             let threeImg = arrySrc[2];
@@ -281,6 +208,7 @@ function fivImg() {
             let content ='';
             let countImgResidual = '';
             let plus = arrySrc.length < 5 || arrySrc.length === 5 ? '' : '+'
+            let lastImg = arrySrc.length < 5 ||arrySrc.length === 5 ? '' : 'lastImg'
             if ( arrySrc.length > 5) {
                   countImgResidual = arrySrc.length - 5
             }
@@ -288,68 +216,54 @@ function fivImg() {
       if ( arrySrc.length === 0) { 
             content = ` 
             <div class='fivImg'>
-                        <div class='item1 '>
+                        <div class='item1'>
                         </div>
-                        <div class='item2 ' >
+                        <div class='item2'>
                         </div>
-                        <div class='item3 ' >
+                        <div class='item3'>
                         </div>
-                        <div class='item4 ' >
+                        <div class='item4'>
                         </div>
-                        <div class='item5 ' >
+                        <div class='item5'>
                         </div>
                   
             </div>
-
             `
           divPreview.html(content) 
       }
-
       else {
             content = `
-            <div class='fivImg'>
-      
-                <div class='item1 ' style='background-image: url(${oneImg});   
-                                                        background-size: cover;
-                                                        position: relative;
-                                                        background-repeat: no-repeat;
-                                                        background-position: center;'>
-      
-                </div>
-                <div class='item2 ' style='background-image: url(${twoImg}); 
-                                                        background-size: cover;
-                                                        position: relative;
-                                                        background-repeat: no-repeat;
-                                                        background-position: center;'>
-                </div>
-                <div class='item3 ' style='background-image: url(${threeImg});   
-                                                        background-size: cover;
-                                                        position: relative;
-                                                        background-repeat: no-repeat;
-                                                        background-position: center;'>
-                </div>
-        
-                  <div class='item4 ' style='background-image: url(${fourImg});   
-                                                background-size: cover;
-                                                position: relative;
-                                                background-repeat: no-repeat;
-                                                background-position: center;'>
-
+                  <div class='fivImg'>
+            
+                  <div class='item1' ondrop="drop(event)" ondragover="allowDrop(event)">
+                              <img src = ${oneImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag1">  
                   </div>
-                  <div class='item5 ' style='background-image: url(${fiveImg});    
-                                                background-size: cover;
-                                                position: relative;
-                                                background-repeat: no-repeat;
-                                                background-position: center;'>
-                                                <span class = 'countResidual' > ${plus}${countImgResidual} </span>
+                  <div class='item2' ondrop="drop(event)" ondragover="allowDrop(event)">
+                              <img src = ${twoImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag2">  
+                  </div>
+                  <div class='item3' ondrop="drop(event)" ondragover="allowDrop(event)">
+                              <img src = ${threeImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag3"> 
+                  </div>
+                  <div class='item4' ondrop="drop(event)" ondragover="allowDrop(event)">
+                              <img src = ${fourImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag4">  
+                  </div>
+                  <div class='item5 ${lastImg}' ondrop="drop(event)" ondragover="allowDrop(event)">
+                              <img src = ${fiveImg} onclick="onClick(this)" class="modal-hover-opacity" draggable="true" ondragstart="drag(event)" id="drag5">                           
+                        <span class = 'countResidual' > ${plus}${countImgResidual} </span>
                   <div>                                        
-           
-            </div>
-      
+            
+                  </div>
             `
             divPreview.html(content)
-
       }
+}
+
+
+
+function onClick(element) {
+      console.log (element.src)
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
 }
 
 
@@ -357,6 +271,29 @@ function fivImg() {
 
 
 
+function allowDrop(ev) {
+      ev.preventDefault();
+}
+  
+function drag(ev) {
+      ev.dataTransfer.setData("src", ev.target.id);
+}
+  
+function drop(ev) {
+      ev.preventDefault();
+       debugger
+      let src = document.getElementById(ev.dataTransfer.getData("src"));
+      let srcParent = src.parentNode;
+      let tgt = ev.currentTarget.firstElementChild;
+  
+      ev.currentTarget.replaceChild(src, tgt);
+      srcParent.appendChild(tgt);
+}
+
+
+
+
+    
 
 
 
@@ -405,10 +342,590 @@ function fivImg() {
 
 
 
-$(function() {
-      $('#draggable').draggable();
-     
-  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//http://jsfiddle.net/jstoolsmith/TJKmh/
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// drag : kéo ; drop : thả
+// allowDrop : cho phép thả
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -34,7 +34,7 @@ body {
     background: #ffffff;
     border: 1px solid gray;
     border-radius: 10px;
-    height: 110 vh;
+    height: 90vh;
     margin-left: -10px;
     box-shadow: 1px 1px 1px 1px gray; }
     .content .left input {
@@ -54,7 +54,13 @@ body {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%); }
+        transform: translate(-50%, -50%);
+        z-index: 5; }
+      .content .left #preview img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        cursor: pointer; }
 
 #allImg {
   height: 120px;
@@ -80,14 +86,13 @@ body {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr); }
   .twoImg .item1 {
+    overflow: hidden;
     grid-column-start: 1;
     grid-column-end: 7;
     grid-row-start: 1;
     grid-row-end: 13;
-    background: #dcdcdc;
-    cursor: move; }
+    background: #dcdcdc; }
   .twoImg .item2 {
-    cursor: move;
     grid-column-start: 7;
     grid-column-end: 13;
     grid-row-start: 1;
@@ -115,7 +120,8 @@ body {
     grid-column-end: 13;
     grid-row-start: 8;
     grid-row-end: 13;
-    background: #dcdcdc; }
+    background: #dcdcdc;
+    position: relative; }
   .threeImg .threeImgUp {
     grid-column-start: 1;
     grid-column-end: 13;
@@ -148,7 +154,8 @@ body {
     grid-column-end: 13;
     grid-row-start: 9;
     grid-row-end: 13;
-    background: #dcdcdc; }
+    background: #dcdcdc;
+    position: relative; }
   .fourImg .fourImgLeft {
     grid-column-start: 1;
     grid-column-end: 10;
@@ -167,34 +174,35 @@ body {
   grid-template-rows: repeat(12, 1fr); }
   .fivImg .item1 {
     grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column-end: 7;
     grid-row-start: 1;
-    grid-row-end: 5;
+    grid-row-end: 8;
     background: #dcdcdc; }
   .fivImg .item2 {
-    grid-column-start: 5;
-    grid-column-end: 9;
-    grid-row-start: 1;
-    grid-row-end: 5;
-    background: #dcdcdc; }
-  .fivImg .item3 {
-    grid-column-start: 9;
+    grid-column-start: 7;
     grid-column-end: 13;
     grid-row-start: 1;
-    grid-row-end: 5;
+    grid-row-end: 8;
+    background: #dcdcdc; }
+  .fivImg .item3 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 8;
+    grid-row-end: 13;
     background: #dcdcdc; }
   .fivImg .item4 {
-    grid-column-start: 1;
-    grid-column-end: 7;
-    grid-row-start: 5;
+    grid-column-start: 5;
+    grid-column-end: 9;
+    grid-row-start: 8;
     grid-row-end: 13;
     background: #dcdcdc; }
   .fivImg .item5 {
-    grid-column-start: 7;
+    grid-column-start: 9;
     grid-column-end: 13;
-    grid-row-start: 5;
+    grid-row-start: 8;
     grid-row-end: 13;
-    background: #dcdcdc; }
+    background: #dcdcdc;
+    position: relative; }
 
 .defulalt {
   width: 100%;
@@ -202,22 +210,55 @@ body {
   display: flex;
   flex-wrap: wrap;
   text-align: center; }
-  @media (max-width: 1024px) {
-    .content .left {
-        height: 80vh;
-    }
-  }
 
+.lastImg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2; }
 
+.modal {
+  z-index: 9;
+  display: none;
+  padding-top: 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .modal .close {
+    text-decoration: none;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    color: white; }
+  .modal .modal-content {
+    margin: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.modal-hover-opacity {
+  opacity: 1;
+  transition: 1s; }
+
+.modal-hover-opacity:hover {
+  opacity: 0.80; }
+
+@media (max-width: 1024px) {
+  .content .left {
+    height: 85vh; } }
 @media (max-width: 876px) {
   .right img {
-    max-width: 70px; }
-
-  .card {
-    left: 20%; }
-
-  #preview img {
-    max-width: 270px; } }
+    max-width: 70px; } }
 @media (max-aspect-ratio: 1 / 1) and (max-width: 576px) {
   .content {
     margin: 0rem;
@@ -246,7 +287,8 @@ body {
           max-height: none;
           height: auto; }
         .content .left #preview .countResidual {
-          font-size: 20px; }
+          font-size: 20px;
+          z-index: 5; }
 
   .twoImg {
     height: 350px;
